@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "minecraft:gold_nugget"
+    },
+    "S": {
+      "item": "minecraft:crimson_slab"
+    }
+  },
+  "pattern": [
+    "R R",
+    "SSS"
+  ],
+  "result": {
+    "item": "railways:track_crimson"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_byg_sythian"
+    },
+    {
+      "item": "railways:track_byg_sythian"
+    }
+  ],
+  "result": {
+    "item": "railways:track_byg_sythian_wide"
+  }
+}

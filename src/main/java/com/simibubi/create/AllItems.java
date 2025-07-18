@@ -171,7 +171,8 @@ public class AllItems {
 	public static final ItemEntry<CardboardSwordItem> CARDBOARD_SWORD =
 		REGISTRATE.item("cardboard_sword", CardboardSwordItem::new)
 			.properties(p -> p.stacksTo(1))
-			.model(AssetLookup.itemModelWithPartials())
+			// .model(AssetLookup.itemModelWithPartials())
+			.model(AssetLookup.itemModel("package_transforms"))
 			.register();
 
 	public static final ItemEntry<Item> RAW_ZINC =
@@ -184,7 +185,8 @@ public class AllItems {
 	public static final ItemEntry<ChromaticCompoundItem> CHROMATIC_COMPOUND =
 		REGISTRATE.item("chromatic_compound", ChromaticCompoundItem::new)
 			.properties(p -> p.rarity(Rarity.UNCOMMON))
-			.model(AssetLookup.existingItemModel())
+			// .model(AssetLookup.existingItemModel())
+			.model(AssetLookup.itemModel("package_transforms"))
 			.color(() -> ChromaticCompoundColor::new)
 			.register();
 
@@ -235,12 +237,14 @@ public class AllItems {
 
 	public static final ItemEntry<VerticalGearboxItem> VERTICAL_GEARBOX =
 		REGISTRATE.item("vertical_gearbox", VerticalGearboxItem::new)
-			.model(AssetLookup.customBlockItemModel("gearbox", "item_vertical"))
+			// .model(AssetLookup.customBlockItemModel("gearbox", "item_vertical"))
+			.model(AssetLookup.itemModel("package_transforms"))
 			.register();
 
 	public static final ItemEntry<BlazeBurnerBlockItem> EMPTY_BLAZE_BURNER =
 		REGISTRATE.item("empty_blaze_burner", BlazeBurnerBlockItem::empty)
-			.model(AssetLookup.customBlockItemModel("blaze_burner", "block"))
+			// .model(AssetLookup.customBlockItemModel("blaze_burner", "block"))
+			.model(AssetLookup.itemModel("package_transforms"))
 			.register();
 
 	public static final ItemEntry<GogglesItem> GOGGLES = REGISTRATE.item("goggles", GogglesItem::new)
@@ -267,7 +271,8 @@ public class AllItems {
 	public static final ItemEntry<BacktankBlockItem> COPPER_BACKTANK_PLACEABLE = REGISTRATE
 		.item("copper_backtank_placeable",
 			p -> new BacktankBlockItem(AllBlocks.COPPER_BACKTANK.get(), AllItems.COPPER_BACKTANK::get, p))
-		.model((c, p) -> p.withExistingParent(c.getName(), p.mcLoc("item/barrier")))
+		// .model((c, p) -> p.withExistingParent(c.getName(), p.mcLoc("item/barrier")))
+		.model(AssetLookup.itemModel("package_transforms"))
 		.register();
 
 	// wrapped by NETHERITE_BACKTANK for block placement uses.
@@ -275,7 +280,8 @@ public class AllItems {
 	public static final ItemEntry<BacktankBlockItem> NETHERITE_BACKTANK_PLACEABLE = REGISTRATE
 		.item("netherite_backtank_placeable",
 			p -> new BacktankBlockItem(AllBlocks.NETHERITE_BACKTANK.get(), AllItems.NETHERITE_BACKTANK::get, p))
-		.model((c, p) -> p.withExistingParent(c.getName(), p.mcLoc("item/barrier")))
+		// .model((c, p) -> p.withExistingParent(c.getName(), p.mcLoc("item/barrier")))
+		.model(AssetLookup.itemModel("package_transforms"))
 		.register();
 
 	public static final ItemEntry<? extends BacktankItem>
@@ -285,7 +291,8 @@ public class AllItems {
 			.item("copper_backtank",
 				p -> new BacktankItem(AllArmorMaterials.COPPER, p, Create.asResource("copper_diving"),
 					COPPER_BACKTANK_PLACEABLE))
-			.model(AssetLookup.customGenericItemModel("_", "item"))
+			// .model(AssetLookup.customGenericItemModel("_", "item"))
+			.model(AssetLookup.itemModel("package_transforms"))
 			.tag(AllItemTags.PRESSURIZED_AIR_SOURCES.tag)
 			.tag(forgeItemTag("armors/chestplates"))
 			.register(),
@@ -294,7 +301,8 @@ public class AllItems {
 		.item("netherite_backtank",
 			p -> new BacktankItem.Layered(ArmorMaterials.NETHERITE, p, Create.asResource("netherite_diving"),
 				NETHERITE_BACKTANK_PLACEABLE))
-		.model(AssetLookup.customGenericItemModel("_", "item"))
+		// .model(AssetLookup.customGenericItemModel("_", "item"))
+		.model(AssetLookup.itemModel("package_transforms"))
 		.properties(p -> p.fireResistant())
 		.tag(AllItemTags.PRESSURIZED_AIR_SOURCES.tag)
 		.tag(forgeItemTag("armors/chestplates"))
@@ -337,27 +345,31 @@ public class AllItems {
 		CARDBOARD_HELMET = REGISTRATE.item("cardboard_helmet", p -> new CardboardHelmetItem(ArmorItem.Type.HELMET, p))
 		.tag(forgeItemTag("armors/helmet"), ItemTags.TRIMMABLE_ARMOR)
 		.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.create.cardboard_armor"))
-		.model(TrimmableArmorModelGenerator::generate)
+		// .model(TrimmableArmorModelGenerator::generate)
+		.model(AssetLookup.itemModel("package_transforms"))
 		.register(),
 
 	CARDBOARD_CHESTPLATE =
 		REGISTRATE.item("cardboard_chestplate", p -> new CardboardArmorItem(ArmorItem.Type.CHESTPLATE, p))
 			.tag(forgeItemTag("armors/chestplate"), ItemTags.TRIMMABLE_ARMOR)
 			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.create.cardboard_armor"))
-			.model(TrimmableArmorModelGenerator::generate)
+			// .model(TrimmableArmorModelGenerator::generate)
+			.model(AssetLookup.itemModel("package_transforms"))
 			.register(),
 
 	CARDBOARD_LEGGINGS =
 		REGISTRATE.item("cardboard_leggings", p -> new CardboardArmorItem(ArmorItem.Type.LEGGINGS, p))
 			.tag(forgeItemTag("armors/leggings"), ItemTags.TRIMMABLE_ARMOR)
 			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.create.cardboard_armor"))
-			.model(TrimmableArmorModelGenerator::generate)
+			// .model(TrimmableArmorModelGenerator::generate)
+			.model(AssetLookup.itemModel("package_transforms"))
 			.register(),
 
 	CARDBOARD_BOOTS = REGISTRATE.item("cardboard_boots", p -> new CardboardArmorItem(ArmorItem.Type.BOOTS, p))
 		.tag(forgeItemTag("armors/boots"), ItemTags.TRIMMABLE_ARMOR)
 		.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.create.cardboard_armor"))
-		.model(TrimmableArmorModelGenerator::generate)
+		// .model(TrimmableArmorModelGenerator::generate)
+		.model(AssetLookup.itemModel("package_transforms"))
 		.register();
 
 	public static final ItemEntry<SandPaperItem> SAND_PAPER = REGISTRATE.item("sand_paper", SandPaperItem::new)
@@ -392,31 +404,36 @@ public class AllItems {
 	public static final ItemEntry<LinkedControllerItem> LINKED_CONTROLLER =
 		REGISTRATE.item("linked_controller", LinkedControllerItem::new)
 			.properties(p -> p.stacksTo(1))
-			.model(AssetLookup.itemModelWithPartials())
+			// .model(AssetLookup.itemModelWithPartials())
+			.model(AssetLookup.itemModel("package_transforms"))
 			.register();
 
 	public static final ItemEntry<PotatoCannonItem> POTATO_CANNON =
 		REGISTRATE.item("potato_cannon", PotatoCannonItem::new)
-			.model(AssetLookup.itemModelWithPartials())
+			// .model(AssetLookup.itemModelWithPartials())
+			.model(AssetLookup.itemModel("package_transforms"))
 			.register();
 
 	public static final ItemEntry<ExtendoGripItem> EXTENDO_GRIP = REGISTRATE.item("extendo_grip", ExtendoGripItem::new)
 		.properties(p -> p.rarity(Rarity.UNCOMMON))
-		.model(AssetLookup.itemModelWithPartials())
+		// .model(AssetLookup.itemModelWithPartials())
+		.model(AssetLookup.itemModel("package_transforms"))
 		.register();
 
 	public static final ItemEntry<SymmetryWandItem> WAND_OF_SYMMETRY =
 		REGISTRATE.item("wand_of_symmetry", SymmetryWandItem::new)
 			.properties(p -> p.stacksTo(1)
 				.rarity(Rarity.UNCOMMON))
-			.model(AssetLookup.itemModelWithPartials())
+			// .model(AssetLookup.itemModelWithPartials())
+			.model(AssetLookup.itemModel("package_transforms"))
 			.register();
 
 	public static final ItemEntry<WorldshaperItem> WORLDSHAPER =
 		REGISTRATE.item("handheld_worldshaper", WorldshaperItem::new)
 			.properties(p -> p.rarity(Rarity.EPIC))
 			.lang("Creative Worldshaper")
-			.model(AssetLookup.itemModelWithPartials())
+			// .model(AssetLookup.itemModelWithPartials())
+			.model(AssetLookup.itemModel("package_transforms"))
 			.register();
 
 	public static final ItemEntry<TreeFertilizerItem> TREE_FERTILIZER =

@@ -15,7 +15,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "create:stock_ticker"
+      "item": "minecraft:air"
     },
     "show_toast": true,
     "title": {

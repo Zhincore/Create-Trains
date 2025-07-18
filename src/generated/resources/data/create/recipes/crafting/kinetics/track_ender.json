@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": [
+      {
+        "tag": "forge:nuggets/iron"
+      },
+      {
+        "tag": "forge:nuggets/zinc"
+      }
+    ],
+    "S": {
+      "item": "minecraft:end_stone_brick_slab"
+    }
+  },
+  "pattern": [
+    "R R",
+    "SSS"
+  ],
+  "result": {
+    "item": "railways:track_ender"
+  },
+  "show_notification": true
+}

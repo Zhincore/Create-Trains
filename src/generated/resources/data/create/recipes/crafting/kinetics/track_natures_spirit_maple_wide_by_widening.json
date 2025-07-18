@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_natures_spirit_maple"
+    },
+    {
+      "item": "railways:track_natures_spirit_maple"
+    }
+  ],
+  "result": {
+    "item": "railways:track_natures_spirit_maple_wide"
+  }
+}

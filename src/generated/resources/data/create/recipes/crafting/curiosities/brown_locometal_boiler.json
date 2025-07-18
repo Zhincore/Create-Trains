@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "railways:brown_slashed_locometal"
+    },
+    "u": {
+      "item": "minecraft:bucket"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#u#",
+    " # "
+  ],
+  "result": {
+    "count": 2,
+    "item": "railways:brown_locometal_boiler"
+  },
+  "show_notification": true
+}

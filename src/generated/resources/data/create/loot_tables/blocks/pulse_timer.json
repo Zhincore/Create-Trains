@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:pulse_timer"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:encased_chain_drive"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

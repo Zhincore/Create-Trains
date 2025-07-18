@@ -113,7 +113,7 @@ public class BacktankBlock extends HorizontalKineticBlock implements IBE<Backtan
 		if (stack == null)
 			return;
 		withBlockEntityDo(worldIn, pos, be -> {
-			be.setCapacityEnchantLevel(stack.getEnchantmentLevel(AllEnchantments.CAPACITY.get()));
+			// be.setCapacityEnchantLevel(stack.getEnchantmentLevel(AllEnchantments.CAPACITY.get()));
 			be.setAirLevel(stack.getOrCreateTag()
 				.getInt("Air"));
 			CompoundTag vanillaTag = stack.getOrCreateTag();

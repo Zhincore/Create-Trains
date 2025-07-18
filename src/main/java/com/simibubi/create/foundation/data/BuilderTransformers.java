@@ -102,10 +102,10 @@ public class BuilderTransformers {
 			.onRegister(CreateRegistrate.casingConnectivity((block, cc) -> cc.make(block, casingShift.get(),
 				(s, f) -> f.getAxis() != s.getValue(EncasedShaftBlock.AXIS))))
 			.blockstate((c, p) -> axisBlock(c, p, blockState -> p.models()
-				.getExistingFile(p.modLoc("block/encased_shaft/block_" + casing)), true))
-			.item()
-			.model(AssetLookup.customBlockItemModel("encased_shaft", "item_" + casing))
-			.build();
+				.getExistingFile(p.modLoc("block/encased_shaft/block_" + casing)), true));
+			// .item()
+			// .model(AssetLookup.customBlockItemModel("encased_shaft", "item_" + casing))
+			// .build();
 	}
 
 	public static <B extends StandardBogeyBlock, P> NonNullUnaryOperator<BlockBuilder<B, P>> bogey() {
@@ -211,14 +211,14 @@ public class BuilderTransformers {
 					.texture("4", Create.asResource("block/" + gearbox))
 					.texture("1", new ResourceLocation("block/stripped_" + wood + "_log_top"))
 					.texture("side", Create.asResource("block/" + casing + encasedSuffix));
-			}, false))
-			.item()
-			.model((c, p) -> p.withExistingParent(c.getName(), p.modLoc("block/" + blockFolder + "/item"))
-				.texture("casing", Create.asResource("block/" + casing + "_casing"))
-				.texture("particle", Create.asResource("block/" + casing + "_casing"))
-				.texture("1", new ResourceLocation("block/stripped_" + wood + "_log_top"))
-				.texture("side", Create.asResource("block/" + casing + encasedSuffix)))
-			.build();
+			}, false));
+			// .item()
+			// .model((c, p) -> p.withExistingParent(c.getName(), p.modLoc("block/" + blockFolder + "/item"))
+			// 	.texture("casing", Create.asResource("block/" + casing + "_casing"))
+			// 	.texture("particle", Create.asResource("block/" + casing + "_casing"))
+			// 	.texture("1", new ResourceLocation("block/stripped_" + wood + "_log_top"))
+			// 	.texture("side", Create.asResource("block/" + casing + encasedSuffix)))
+			// .build();
 	}
 
 	private static <B extends RotatedPillarKineticBlock, P> BlockBuilder<B, P> encasedBase(BlockBuilder<B, P> b,
@@ -234,9 +234,9 @@ public class BuilderTransformers {
 			.blockstate((c, p) -> p.horizontalBlock(c.get(), p.models()
 				.getExistingFile(p.modLoc("block/cuckoo_clock/block"))))
 			.addLayer(() -> RenderType::cutoutMipped)
-			.transform(CStress.setImpact(1))
-			.item()
-			.transform(ModelGen.customItemModel("cuckoo_clock", "item"));
+			.transform(CStress.setImpact(1));
+			// .item()
+			// .transform(ModelGen.customItemModel("cuckoo_clock", "item"));
 	}
 
 	public static <B extends Block, P> NonNullUnaryOperator<BlockBuilder<B, P>> ladder(String name,
@@ -251,11 +251,11 @@ public class BuilderTransformers {
 				.texture("particle", p.modLoc("block/ladder_" + name))))
 			.properties(p -> p.sound(SoundType.COPPER))
 			.transform(pickaxeOnly())
-			.tag(BlockTags.CLIMBABLE)
-			.item()
-			.recipe((c, p) -> p.stonecutting(ingredient.get(), RecipeCategory.DECORATIONS, c::get, 2))
-			.model((c, p) -> p.blockSprite(c::get, p.modLoc("block/ladder_" + name)))
-			.build();
+			.tag(BlockTags.CLIMBABLE);
+			// .item()
+			// .recipe((c, p) -> p.stonecutting(ingredient.get(), RecipeCategory.DECORATIONS, c::get, 2))
+			// .model((c, p) -> p.blockSprite(c::get, p.modLoc("block/ladder_" + name)))
+			// .build();
 	}
 
 	public static <B extends Block, P> NonNullUnaryOperator<BlockBuilder<B, P>> scaffold(String name,
@@ -281,11 +281,11 @@ public class BuilderTransformers {
 			.onRegister(connectedTextures(
 				() -> new MetalScaffoldingCTBehaviour(scaffoldShift, scaffoldInsideShift, casingShift)))
 			.transform(pickaxeOnly())
-			.tag(BlockTags.CLIMBABLE)
-			.item(MetalScaffoldingBlockItem::new)
-			.recipe((c, p) -> p.stonecutting(ingredient.get(), RecipeCategory.DECORATIONS, c::get, 2))
-			.model((c, p) -> p.withExistingParent(c.getName(), p.modLoc("block/" + c.getName())))
-			.build();
+			.tag(BlockTags.CLIMBABLE);
+			// .item(MetalScaffoldingBlockItem::new)
+			// .recipe((c, p) -> p.stonecutting(ingredient.get(), RecipeCategory.DECORATIONS, c::get, 2))
+			// .model((c, p) -> p.withExistingParent(c.getName(), p.modLoc("block/" + c.getName())))
+			// .build();
 	}
 
 	public static <B extends ValveHandleBlock> NonNullUnaryOperator<BlockBuilder<B, CreateRegistrate>> valveHandle(
@@ -361,17 +361,17 @@ public class BuilderTransformers {
 							.texture("particle", particleTexture))
 						.rotationY(state.getValue(BeltTunnelBlock.HORIZONTAL_AXIS) == Axis.X ? 0 : 90)
 						.build();
-				}))
-			.item(BeltTunnelItem::new)
-			.model((c, p) -> {
-				p.withExistingParent("item/" + type + "_tunnel", p.modLoc("block/belt_tunnel/item"))
-					.texture("top", p.modLoc(prefix + "_top"))
-					.texture("tunnel", p.modLoc(prefix))
-					.texture("direction", p.modLoc(funnel_prefix + "_neutral"))
-					.texture("frame", p.modLoc(funnel_prefix + "_frame"))
-					.texture("particle", particleTexture);
-			})
-			.build();
+				}));
+			// .item(BeltTunnelItem::new)
+			// .model((c, p) -> {
+			// 	p.withExistingParent("item/" + type + "_tunnel", p.modLoc("block/belt_tunnel/item"))
+			// 		.texture("top", p.modLoc(prefix + "_top"))
+			// 		.texture("tunnel", p.modLoc(prefix))
+			// 		.texture("direction", p.modLoc(funnel_prefix + "_neutral"))
+			// 		.texture("frame", p.modLoc(funnel_prefix + "_frame"))
+			// 		.texture("particle", particleTexture);
+			// })
+			// .build();
 	}
 
 	public static <B extends Block, P> NonNullUnaryOperator<BlockBuilder<B, P>> mechanicalPiston(PistonType type) {
@@ -379,9 +379,9 @@ public class BuilderTransformers {
 			.properties(p -> p.noOcclusion())
 			.blockstate(new MechanicalPistonGenerator(type)::generate)
 			.addLayer(() -> RenderType::cutoutMipped)
-			.transform(CStress.setImpact(4.0))
-			.item()
-			.transform(ModelGen.customItemModel("mechanical_piston", type.getSerializedName(), "item"));
+			.transform(CStress.setImpact(4.0));
+			// .item()
+			// .transform(ModelGen.customItemModel("mechanical_piston", type.getSerializedName(), "item"));
 	}
 
 	public static <B extends Block, P> NonNullUnaryOperator<BlockBuilder<B, P>> bearing(String prefix,
@@ -396,13 +396,13 @@ public class BuilderTransformers {
 			.blockstate((c, p) -> p.directionalBlock(c.get(), p.models()
 				.withExistingParent(c.getName(), baseBlockModelLocation)
 				.texture("side", sideTextureLocation)
-				.texture("back", backTextureLocation)))
-			.item()
-			.model((c, p) -> p.withExistingParent(c.getName(), baseItemModelLocation)
-				.texture("top", topTextureLocation)
-				.texture("side", sideTextureLocation)
-				.texture("back", backTextureLocation))
-			.build();
+				.texture("back", backTextureLocation)));
+			// .item()
+			// .model((c, p) -> p.withExistingParent(c.getName(), baseItemModelLocation)
+			// 	.texture("top", topTextureLocation)
+			// 	.texture("side", sideTextureLocation)
+			// 	.texture("back", backTextureLocation))
+			// .build();
 	}
 
 	public static <B extends Block, P> NonNullUnaryOperator<BlockBuilder<B, P>> crate(String type) {
@@ -430,10 +430,10 @@ public class BuilderTransformers {
 							.modelFile(models.get(variant))
 							.build();
 					});
-			})
-			.item()
-			.properties(p -> type.equals("creative") ? p.rarity(Rarity.EPIC) : p)
-			.transform(ModelGen.customItemModel("crate", type, "single"));
+			});
+			// .item()
+			// .properties(p -> type.equals("creative") ? p.rarity(Rarity.EPIC) : p)
+			// .transform(ModelGen.customItemModel("crate", type, "single"));
 	}
 
 	public static <B extends Block, P> NonNullUnaryOperator<BlockBuilder<B, P>> backtank(Supplier<ItemLike> drop) {
@@ -467,11 +467,11 @@ public class BuilderTransformers {
 					.getSerializedName();
 				return p.models()
 					.withExistingParent(c.getName() + "_" + variant, p.modLoc("block/bell_base/block_" + variant));
-			}))
-			.item()
-			.model((c, p) -> p.withExistingParent(c.getName(), p.modLoc("block/" + c.getName())))
-			.tag(AllItemTags.CONTRAPTION_CONTROLLED.tag)
-			.build();
+			}));
+			// .item()
+			// .model((c, p) -> p.withExistingParent(c.getName(), p.modLoc("block/" + c.getName())))
+			// .tag(AllItemTags.CONTRAPTION_CONTROLLED.tag)
+			// .build();
 	}
 
 	public static ItemBuilder<PackageItem, CreateRegistrate> packageItem(PackageStyle style) {
@@ -533,10 +533,10 @@ public class BuilderTransformers {
 				.sound(SoundType.NETHERITE_BLOCK))
 			.transform(pickaxeOnly())
 			.addLayer(() -> RenderType::cutoutMipped)
-			.blockstate(new PackagerGenerator()::generate)
-			.item()
-			.model(AssetLookup::customItemModel)
-			.build();
+			.blockstate(new PackagerGenerator()::generate);
+			// .item()
+			// .model(AssetLookup::customItemModel)
+			// .build();
 	}
 
 	public static <B extends Block, P> NonNullUnaryOperator<BlockBuilder<B, P>> palettesIronBlock() {
@@ -547,9 +547,9 @@ public class BuilderTransformers {
 			.transform(pickaxeOnly())
 			.blockstate((c, p) -> p.simpleBlock(c.get(), p.models()
 				.cubeColumn(c.getName(), p.modLoc("block/" + c.getName()), p.modLoc("block/" + c.getName() + "_top"))))
-			.tag(AllBlockTags.WRENCH_PICKUP.tag)
-			.recipe((c, p) -> p.stonecutting(DataIngredient.tag(Tags.Items.INGOTS_IRON), RecipeCategory.BUILDING_BLOCKS,
-				c::get, 2))
-			.simpleItem();
+			.tag(AllBlockTags.WRENCH_PICKUP.tag);
+			// .recipe((c, p) -> p.stonecutting(DataIngredient.tag(Tags.Items.INGOTS_IRON), RecipeCategory.BUILDING_BLOCKS,
+			// 	c::get, 2))
+			// .simpleItem();
 	}
 }

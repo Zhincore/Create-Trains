@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_byg_witch_hazel"
+    },
+    {
+      "item": "railways:track_byg_witch_hazel"
+    }
+  ],
+  "result": {
+    "item": "railways:track_byg_witch_hazel_wide"
+  }
+}

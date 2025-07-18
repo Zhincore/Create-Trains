@@ -111,7 +111,7 @@ legacyForge {
             gameDirectory = project.file('run')
             systemProperty 'forge.logging.markers', 'REGISTRIES,REGISTRYDUMP'
             systemProperty 'forge.logging.console.level', 'debug'
-            programArguments.addAll("--mod", mod_id as String, "--all", "--output", file("src/generated/resources/").getAbsolutePath(), "--existing", file("src/main/resources").getAbsolutePath())
+            programArguments.addAll("--mod", "create", "--all", "--output", file("src/generated/resources/").getAbsolutePath(), "--existing", file("src/main/resources").getAbsolutePath())
         }
 
         gameTestServer {
@@ -202,6 +202,9 @@ dependencies {
 
     modImplementation("curse.maven:journeymap-32274:5457831")
     // modImplementation("ignored:journeymap-1.20.1-5.10.1-forge")
+
+    modImplementation("maven.modrinth:create-steam-n-rails:1.6.11-alpha+forge-mc1.20.1") { transitive = false }
+    //modImplementation("maven.modrinth:bellsandwhistles:0.4.5-1.20.x") { transitive = false }
 
     // modRuntimeOnly("curse.maven:framedblocks-441647:5399211")
     // modRuntimeOnly("curse.maven:galosphere-631098:4574834")

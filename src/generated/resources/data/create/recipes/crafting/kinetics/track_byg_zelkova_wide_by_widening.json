@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_byg_zelkova"
+    },
+    {
+      "item": "railways:track_byg_zelkova"
+    }
+  ],
+  "result": {
+    "item": "railways:track_byg_zelkova_wide"
+  }
+}

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:waxed_oxidized_copper_tiles"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

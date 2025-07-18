@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": [
+      {
+        "tag": "forge:nuggets/iron"
+      },
+      {
+        "tag": "forge:nuggets/zinc"
+      }
+    ],
+    "S": {
+      "item": "minecraft:glass_pane"
+    }
+  },
+  "pattern": [
+    "R R",
+    "SSS"
+  ],
+  "result": {
+    "item": "railways:track_tieless"
+  },
+  "show_notification": true
+}

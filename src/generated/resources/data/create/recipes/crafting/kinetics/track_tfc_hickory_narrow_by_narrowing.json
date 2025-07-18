@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_tfc_hickory"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "railways:track_tfc_hickory_narrow"
+  }
+}

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.simibubi.create.AllItems;
+import com.simibubi.create.AllTags;
 import com.simibubi.create.AllTags.AllBlockTags;
 import com.simibubi.create.AllTags.AllEntityTags;
 import com.simibubi.create.AllTags.AllFluidTags;
@@ -222,9 +223,18 @@ public class CreateRegistrateTags {
 		prov.tag(Tags.Items.INGOTS)
 			.addTag(AllItemTags.CREATE_INGOTS.tag);
 
+		// Why is this not by default??
+		prov.tag(Tags.Items.OBSIDIAN)
+			.add(Items.OBSIDIAN)
+			.add(Items.CRYING_OBSIDIAN);
+			
 		prov.tag(AllItemTags.OBSIDIAN_DUST.tag).add(AllItems.POWDERED_OBSIDIAN.get());
 
 		// COMPAT
+		
+		// Replace zinc
+		prov.tag(AllTags.forgeItemTag("ingots/zinc"))
+			.add(Items.IRON_INGOT);
 
 		genStrippedWoodItemTags(prov);
 

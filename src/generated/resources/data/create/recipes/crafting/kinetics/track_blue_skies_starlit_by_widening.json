@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_blue_skies_starlit_narrow"
+    },
+    {
+      "item": "railways:track_blue_skies_starlit_narrow"
+    }
+  ],
+  "result": {
+    "item": "railways:track_blue_skies_starlit"
+  }
+}

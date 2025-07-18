@@ -15,7 +15,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "create:millstone"
+      "item": "minecraft:air"
     },
     "show_toast": true,
     "title": {

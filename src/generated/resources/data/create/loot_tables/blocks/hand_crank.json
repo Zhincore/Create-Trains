@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:hand_crank"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

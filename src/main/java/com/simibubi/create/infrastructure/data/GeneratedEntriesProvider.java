@@ -21,11 +21,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class GeneratedEntriesProvider extends DatapackBuiltinEntriesProvider {
 	private static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
-		.add(Registries.DAMAGE_TYPE, AllDamageTypes::bootstrap)
-		.add(Registries.CONFIGURED_FEATURE, AllConfiguredFeatures::bootstrap)
-		.add(Registries.PLACED_FEATURE, AllPlacedFeatures::bootstrap)
-		.add(ForgeRegistries.Keys.BIOME_MODIFIERS, AllBiomeModifiers::bootstrap)
-		.add(CreateRegistries.POTATO_PROJECTILE_TYPE, AllPotatoProjectileTypes::bootstrap);
+		.add(Registries.DAMAGE_TYPE, AllDamageTypes::bootstrap);
+		// .add(Registries.CONFIGURED_FEATURE, AllConfiguredFeatures::bootstrap)
+		// .add(Registries.PLACED_FEATURE, AllPlacedFeatures::bootstrap)
+		// .add(ForgeRegistries.Keys.BIOME_MODIFIERS, AllBiomeModifiers::bootstrap)
+		// .add(CreateRegistries.POTATO_PROJECTILE_TYPE, AllPotatoProjectileTypes::bootstrap);
 
 	public GeneratedEntriesProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
 		super(output, registries, BUILDER, Set.of(Create.ID));

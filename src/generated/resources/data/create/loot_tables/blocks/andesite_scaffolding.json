@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:andesite_scaffolding"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

@@ -89,17 +89,17 @@ public class InputEvents {
 				event.setCanceled(true);
 		}
 
-		if (key == mc.options.keyUse
-			&& (FactoryPanelConnectionHandler.onRightClick() || ChainConveyorConnectionHandler.onRightClick())) {
-			event.setCanceled(true);
-			return;
-		}
+		// if (key == mc.options.keyUse
+		// 	&& (FactoryPanelConnectionHandler.onRightClick() || ChainConveyorConnectionHandler.onRightClick())) {
+		// 	event.setCanceled(true);
+		// 	return;
+		// }
 
-		if (key == mc.options.keyPickItem) {
-			if (ToolboxHandlerClient.onPickItem())
-				event.setCanceled(true);
-			return;
-		}
+		// if (key == mc.options.keyPickItem) {
+		// 	if (ToolboxHandlerClient.onPickItem())
+		// 		event.setCanceled(true);
+		// 	return;
+		// }
 
 		if (!event.isUseItem())
 			return;
@@ -110,23 +110,23 @@ public class InputEvents {
 		if (ChainConveyorInteractionHandler.onUse()) {
 			event.setCanceled(true);
 			return;
-		} else if (PackagePortTargetSelectionHandler.onUse()) {
-			event.setCanceled(true);
-			return;
-		}
+		} //else if (PackagePortTargetSelectionHandler.onUse()) {
+		// 	event.setCanceled(true);
+		// 	return;
+		// }
 
-		if (mc.player != null) {
-			ItemStack itemInHand = mc.player.getItemInHand(event.getHand());
-			if (AllItemTags.WRENCH.matches(itemInHand))
-				return;
-			if (itemInHand.is(Items.CHAIN) || AllBlocks.PACKAGE_FROGPORT.isIn(itemInHand))
-				return;
-		}
+		// if (mc.player != null) {
+		// 	ItemStack itemInHand = mc.player.getItemInHand(event.getHand());
+		// 	if (AllItemTags.WRENCH.matches(itemInHand))
+		// 		return;
+		// 	if (itemInHand.is(Items.CHAIN) || AllBlocks.PACKAGE_FROGPORT.isIn(itemInHand))
+		// 		return;
+		// }
 
-		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
-			if (ChainPackageInteractionHandler.onUse())
-				event.setCanceled(true);
-		});
+		// DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
+		// 	if (ChainPackageInteractionHandler.onUse())
+		// 		event.setCanceled(true);
+		// });
 	}
 
 }

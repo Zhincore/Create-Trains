@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_byg_green_enchanted"
+    },
+    {
+      "item": "railways:track_byg_green_enchanted"
+    }
+  ],
+  "result": {
+    "item": "railways:track_byg_green_enchanted_wide"
+  }
+}

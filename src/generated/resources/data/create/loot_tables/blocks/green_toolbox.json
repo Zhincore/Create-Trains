@@ -11,35 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:copy_name",
-              "source": "block_entity"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "ops": [
-                {
-                  "op": "replace",
-                  "source": "UniqueId",
-                  "target": "UniqueId"
-                }
-              ],
-              "source": "block_entity"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "ops": [
-                {
-                  "op": "replace",
-                  "source": "Inventory",
-                  "target": "Inventory"
-                }
-              ],
-              "source": "block_entity"
-            }
-          ],
-          "name": "create:green_toolbox"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

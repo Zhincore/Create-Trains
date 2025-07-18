@@ -27,18 +27,18 @@ public class AllBiomeModifiers {
 	}
 
 	public static void bootstrap(BootstapContext<BiomeModifier> ctx) {
-		HolderGetter<Biome> biomeLookup = ctx.lookup(Registries.BIOME);
-		HolderSet<Biome> isOverworld = biomeLookup.getOrThrow(BiomeTags.IS_OVERWORLD);
-		HolderSet<Biome> isNether = biomeLookup.getOrThrow(BiomeTags.IS_NETHER);
+		// HolderGetter<Biome> biomeLookup = ctx.lookup(Registries.BIOME);
+		// HolderSet<Biome> isOverworld = biomeLookup.getOrThrow(BiomeTags.IS_OVERWORLD);
+		// HolderSet<Biome> isNether = biomeLookup.getOrThrow(BiomeTags.IS_NETHER);
 
-		HolderGetter<PlacedFeature> featureLookup = ctx.lookup(Registries.PLACED_FEATURE);
-		Holder<PlacedFeature> zincOre = featureLookup.getOrThrow(AllPlacedFeatures.ZINC_ORE);
-		Holder<PlacedFeature> striatedOresOverworld = featureLookup.getOrThrow(AllPlacedFeatures.STRIATED_ORES_OVERWORLD);
-		Holder<PlacedFeature> striatedOresNether = featureLookup.getOrThrow(AllPlacedFeatures.STRIATED_ORES_NETHER);
+		// HolderGetter<PlacedFeature> featureLookup = ctx.lookup(Registries.PLACED_FEATURE);
+		// Holder<PlacedFeature> zincOre = featureLookup.getOrThrow(AllPlacedFeatures.ZINC_ORE);
+		// Holder<PlacedFeature> striatedOresOverworld = featureLookup.getOrThrow(AllPlacedFeatures.STRIATED_ORES_OVERWORLD);
+		// Holder<PlacedFeature> striatedOresNether = featureLookup.getOrThrow(AllPlacedFeatures.STRIATED_ORES_NETHER);
 
-		ctx.register(ZINC_ORE, addOre(isOverworld, zincOre));
-		ctx.register(STRIATED_ORES_OVERWORLD, addOre(isOverworld, striatedOresOverworld));
-		ctx.register(STRIATED_ORES_NETHER, addOre(isNether, striatedOresNether));
+		// ctx.register(ZINC_ORE, addOre(isOverworld, zincOre));
+		// ctx.register(STRIATED_ORES_OVERWORLD, addOre(isOverworld, striatedOresOverworld));
+		// ctx.register(STRIATED_ORES_NETHER, addOre(isNether, striatedOresNether));
 	}
 
 	private static AddFeaturesBiomeModifier addOre(HolderSet<Biome> biomes, Holder<PlacedFeature> feature) {

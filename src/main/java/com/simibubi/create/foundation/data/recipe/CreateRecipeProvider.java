@@ -44,18 +44,18 @@ public final class CreateRecipeProvider extends RecipeProvider {
 	protected void buildRecipes(Consumer<FinishedRecipe> writer) {}
 
 	public static void registerAllProcessing(DataGenerator gen, PackOutput output) {
-		GENERATORS.add(new CreateCrushingRecipeGen(output));
-		GENERATORS.add(new CreateMillingRecipeGen(output));
-		GENERATORS.add(new CreateCuttingRecipeGen(output));
-		GENERATORS.add(new CreateWashingRecipeGen(output));
+		// GENERATORS.add(new CreateCrushingRecipeGen(output));
+		// GENERATORS.add(new CreateMillingRecipeGen(output));
+		// GENERATORS.add(new CreateCuttingRecipeGen(output));
+		// GENERATORS.add(new CreateWashingRecipeGen(output));
 		GENERATORS.add(new CreatePolishingRecipeGen(output));
-		GENERATORS.add(new CreateDeployingRecipeGen(output));
-		GENERATORS.add(new CreateMixingRecipeGen(output));
-		GENERATORS.add(new CreateCompactingRecipeGen(output));
-		GENERATORS.add(new CreatePressingRecipeGen(output));
-		GENERATORS.add(new CreateFillingRecipeGen(output));
-		GENERATORS.add(new CreateEmptyingRecipeGen(output));
-		GENERATORS.add(new CreateHauntingRecipeGen(output));
+		// GENERATORS.add(new CreateDeployingRecipeGen(output));
+		// GENERATORS.add(new CreateMixingRecipeGen(output));
+		// GENERATORS.add(new CreateCompactingRecipeGen(output));
+		// GENERATORS.add(new CreatePressingRecipeGen(output));
+		// GENERATORS.add(new CreateFillingRecipeGen(output));
+		// GENERATORS.add(new CreateEmptyingRecipeGen(output));
+		// GENERATORS.add(new CreateHauntingRecipeGen(output));
 		GENERATORS.add(new CreateItemApplicationRecipeGen(output));
 
 		gen.addProvider(true, new DataProvider() {
@@ -93,7 +93,7 @@ public final class CreateRecipeProvider extends RecipeProvider {
 		}
 
 		static TagKey<Item> goldSheet() {
-			return AllTags.forgeItemTag("plates/gold");
+			return AllTags.forgeItemTag("ingots/gold");
 		}
 
 		static TagKey<Item> stone() {
@@ -133,7 +133,7 @@ public final class CreateRecipeProvider extends RecipeProvider {
 		}
 
 		static TagKey<Item> brassSheet() {
-			return AllTags.forgeItemTag("plates/brass");
+			return AllTags.forgeItemTag("ingots/brass");
 		}
 
 		static TagKey<Item> iron() {
@@ -149,7 +149,7 @@ public final class CreateRecipeProvider extends RecipeProvider {
 		}
 
 		static TagKey<Item> ironSheet() {
-			return AllTags.forgeItemTag("plates/iron");
+			return AllTags.forgeItemTag("ingots/iron");
 		}
 
 		static TagKey<Item> sturdySheet() {
@@ -201,7 +201,7 @@ public final class CreateRecipeProvider extends RecipeProvider {
 		}
 
 		static TagKey<Item> copperSheet() {
-			return AllTags.forgeItemTag("plates/copper");
+			return AllTags.forgeItemTag("ingots/copper");
 		}
 
 		static TagKey<Item> brassNugget() {

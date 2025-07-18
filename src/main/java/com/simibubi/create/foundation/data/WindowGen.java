@@ -89,10 +89,10 @@ public class WindowGen {
 				.nextModel()
 				.modelFile(p.models()
 					.cubeColumn(c.getName() + "_4", side_texture, ends.apply(4)))
-				.build()))
-			.item()
-			.model((c, p) -> p.cubeColumn(c.getName(), side_texture, ends.apply(1)))
-			.build();
+				.build()));
+			// .item()
+			// .model((c, p) -> p.cubeColumn(c.getName(), side_texture, ends.apply(1)))
+			// .build();
 	}
 
 	public static BlockEntry<WindowBlock> customWindowBlock(String name, Supplier<? extends ItemLike> ingredient,
@@ -123,21 +123,21 @@ public class WindowGen {
 			.onRegister(ct == null ? $ -> {
 			} : connectedTextures(() -> new HorizontalCTBehaviour(ct.get())))
 			.addLayer(renderType)
-			.recipe((c, p) -> ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, c.get(), 2)
-				.pattern(" # ")
-				.pattern("#X#")
-				.define('#', ingredient.get())
-				.define('X', DataIngredient.tag(Tags.Items.GLASS_COLORLESS))
-				.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(ingredient.get()))
-				.save(p::accept))
+			// .recipe((c, p) -> ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, c.get(), 2)
+			// 	.pattern(" # ")
+			// 	.pattern("#X#")
+				// .define('#', ingredient.get())
+				// .define('X', DataIngredient.tag(Tags.Items.GLASS_COLORLESS))
+				// .unlockedBy("has_ingredient", RegistrateRecipeProvider.has(ingredient.get()))
+				// .save(p::accept))
 			.initialProperties(() -> Blocks.GLASS)
-			.properties(WindowGen::glassProperties)
-			.properties(p -> p.mapColor(color.get()))
-			.loot((t, g) -> t.dropWhenSilkTouch(g))
+			// .properties(WindowGen::glassProperties)
+			// .properties(p -> p.mapColor(color.get()))
+			// .loot((t, g) -> t.dropWhenSilkTouch(g))
 			.blockstate((c, p) -> p.simpleBlock(c.get(), p.models()
 				.cubeColumn(c.getName(), sideTexture.apply(c.getName()), endTexture.apply(c.getName()))))
-			.tag(BlockTags.IMPERMEABLE)
-			.simpleItem();
+			.tag(BlockTags.IMPERMEABLE);
+			// .simpleItem();
 	}
 
 	public static BlockEntry<ConnectedGlassBlock> framedGlass(String name,
@@ -148,15 +148,15 @@ public class WindowGen {
 			.initialProperties(() -> Blocks.GLASS)
 			.properties(WindowGen::glassProperties)
 			.loot((t, g) -> t.dropWhenSilkTouch(g))
-			.recipe((c, p) -> p.stonecutting(DataIngredient.tag(Tags.Items.GLASS_COLORLESS),
-				RecipeCategory.BUILDING_BLOCKS, c::get))
+			// .recipe((c, p) -> p.stonecutting(DataIngredient.tag(Tags.Items.GLASS_COLORLESS),
+			// 	RecipeCategory.BUILDING_BLOCKS, c::get))
 			.blockstate((c, p) -> BlockStateGen.cubeAll(c, p, "palettes/", "framed_glass"))
-			.tag(Tags.Blocks.GLASS_COLORLESS, BlockTags.IMPERMEABLE)
-			.item()
-			.tag(Tags.Items.GLASS_COLORLESS)
-			.model((c, p) -> p.cubeColumn(c.getName(), p.modLoc(palettesDir() + c.getName()),
-				p.modLoc("block/palettes/framed_glass")))
-			.build()
+			// .tag(Tags.Blocks.GLASS_COLORLESS, BlockTags.IMPERMEABLE)
+			// .item()
+			// .tag(Tags.Items.GLASS_COLORLESS)
+			// .model((c, p) -> p.cubeColumn(c.getName(), p.modLoc(palettesDir() + c.getName()),
+			// 	p.modLoc("block/palettes/framed_glass")))
+			// .build()
 			.register();
 	}
 
@@ -240,35 +240,36 @@ public class WindowGen {
 		name += "_pane";
 
 
-		ItemBuilder<BlockItem, BlockBuilder<G, CreateRegistrate>> itemBuilder = REGISTRATE.block(name, factory)
+		BlockBuilder<G, CreateRegistrate> blockBuilder = REGISTRATE.block(name, factory)
+		// ItemBuilder<BlockItem, BlockBuilder<G, CreateRegistrate>> itemBuilder = REGISTRATE.block(name, factory)
 			.onRegister(connectedTextures)
 			.addLayer(renderType)
 			.initialProperties(() -> Blocks.GLASS_PANE)
 			.properties(p -> p.mapColor(parent.get()
 				.defaultMapColor()))
-			.blockstate(stateProvider)
-			.recipe((c, p) -> {
-				ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, c.get(), 16)
-					.pattern("###")
-					.pattern("###")
-					.define('#', parent.get())
-					.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(parent.get()))
-					.save(p::accept);
-				if (colorless)
-					p.stonecutting(DataIngredient.tag(Tags.Items.GLASS_PANES_COLORLESS), RecipeCategory.BUILDING_BLOCKS,
-						c::get);
-			})
-			.loot((t, g) -> t.dropWhenSilkTouch(g))
-			.item();
+			.blockstate(stateProvider);
+			// .recipe((c, p) -> {
+			// 	ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, c.get(), 16)
+			// 		.pattern("###")
+			// 		.pattern("###")
+			// 		.define('#', parent.get())
+			// 		.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(parent.get()))
+			// 		.save(p::accept);
+			// 	if (colorless)
+			// 		p.stonecutting(DataIngredient.tag(Tags.Items.GLASS_PANES_COLORLESS), RecipeCategory.BUILDING_BLOCKS,
+			// 			c::get);
+			// })
+			// .loot((t, g) -> t.dropWhenSilkTouch(g));
+		// 	.item();
 
-		if (colorless)
-			itemBuilder.tag(Tags.Items.GLASS_PANES, Tags.Items.GLASS_PANES_COLORLESS);
-		else
-			itemBuilder.tag(Tags.Items.GLASS_PANES);
+		// if (colorless)
+		// 	itemBuilder.tag(Tags.Items.GLASS_PANES, Tags.Items.GLASS_PANES_COLORLESS);
+		// else
+		// 	itemBuilder.tag(Tags.Items.GLASS_PANES);
 
-		BlockBuilder<G, CreateRegistrate> blockBuilder = itemBuilder
-			.model((c, p) -> p.generated(c, sideTexture))
-			.build();
+		// BlockBuilder<G, CreateRegistrate> blockBuilder = itemBuilder
+		// 	.model((c, p) -> p.generated(c, sideTexture))
+			// .build();
 
 		if (colorless)
 			blockBuilder.tag(Tags.Blocks.GLASS_PANES, Tags.Blocks.GLASS_PANES_COLORLESS);

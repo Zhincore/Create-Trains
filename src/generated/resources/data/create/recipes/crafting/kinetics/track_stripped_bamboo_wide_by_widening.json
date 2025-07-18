@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_stripped_bamboo"
+    },
+    {
+      "item": "railways:track_stripped_bamboo"
+    }
+  ],
+  "result": {
+    "item": "railways:track_stripped_bamboo_wide"
+  }
+}

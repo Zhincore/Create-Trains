@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": [
+      {
+        "tag": "forge:nuggets/iron"
+      },
+      {
+        "tag": "forge:nuggets/zinc"
+      }
+    ],
+    "S": {
+      "item": "minecraft:bamboo_slab"
+    }
+  },
+  "pattern": [
+    "R R",
+    "SSS"
+  ],
+  "result": {
+    "item": "railways:track_stripped_bamboo"
+  },
+  "show_notification": true
+}

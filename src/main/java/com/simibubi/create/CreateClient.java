@@ -71,8 +71,8 @@ public class CreateClient {
 
 		MODEL_SWAPPER.registerListeners(modEventBus);
 
-		ZAPPER_RENDER_HANDLER.registerListeners(forgeEventBus);
-		POTATO_CANNON_RENDER_HANDLER.registerListeners(forgeEventBus);
+		// ZAPPER_RENDER_HANDLER.registerListeners(forgeEventBus);
+		// POTATO_CANNON_RENDER_HANDLER.registerListeners(forgeEventBus);
 
 		Mods.FTBLIBRARY.executeIfInstalled(() -> () -> FTBIntegration.init(modEventBus, forgeEventBus));
 		PojavChecker.init();
@@ -90,7 +90,7 @@ public class CreateClient {
 		SuperByteBufferCache.getInstance().registerCompartment(CachedBuffers.PARTIAL);
 		SuperByteBufferCache.getInstance().registerCompartment(CachedBuffers.DIRECTIONAL_PARTIAL);
 		SuperByteBufferCache.getInstance().registerCompartment(KineticBlockEntityRenderer.KINETIC_BLOCK);
-		SuperByteBufferCache.getInstance().registerCompartment(WaterWheelRenderer.WATER_WHEEL);
+		// SuperByteBufferCache.getInstance().registerCompartment(WaterWheelRenderer.WATER_WHEEL);
 		SuperByteBufferCache.getInstance().registerCompartment(ContraptionRenderInfo.CONTRAPTION, 20);
 
 		AllPartialModels.init();
@@ -115,7 +115,7 @@ public class CreateClient {
 			graphics.fill(0, 0, screen.width, screen.height, 0x90_282c34);
 		});
 
-		ConfigScreen.shadowState = AllBlocks.LARGE_COGWHEEL.getDefaultState().setValue(CogWheelBlock.AXIS, Direction.Axis.Y);
+		// ConfigScreen.shadowState = AllBlocks.LARGE_COGWHEEL.getDefaultState().setValue(CogWheelBlock.AXIS, Direction.Axis.Y);
 
 		BaseConfigScreen.setDefaultActionFor(Create.ID, base -> base
 				.withButtonLabels("Client Settings", "World Generation Settings", "Gameplay Settings")

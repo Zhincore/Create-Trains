@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:weighted_ejector"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_byg_holly"
+    },
+    {
+      "item": "railways:track_byg_holly"
+    }
+  ],
+  "result": {
+    "item": "railways:track_byg_holly_wide"
+  }
+}

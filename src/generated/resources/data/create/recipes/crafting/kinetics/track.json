@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": [
+      {
+        "tag": "forge:nuggets/iron"
+      },
+      {
+        "tag": "forge:nuggets/zinc"
+      }
+    ],
+    "S": {
+      "tag": "create:sleepers"
+    }
+  },
+  "pattern": [
+    "R R",
+    "SSS"
+  ],
+  "result": {
+    "item": "create:track"
+  },
+  "show_notification": true
+}

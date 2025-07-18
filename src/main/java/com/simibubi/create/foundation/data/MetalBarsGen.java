@@ -133,13 +133,13 @@ public class MetalBarsGen {
 			.tag(AllBlockTags.FAN_TRANSPARENT.tag)
 			.transform(TagGen.pickaxeOnly())
 			.blockstate(barsBlockState(name, specialEdge))
-			.item()
-			.model((c, p) -> {
-				ResourceLocation barsTexture = p.modLoc("block/bars/" + name + "_bars");
-				p.generated(c, barsTexture);
-			})
-			.recipe((c, p) -> p.stonecutting(ingredient.get(), RecipeCategory.DECORATIONS, c::get, 4))
-			.build()
+			// .item()
+			// .model((c, p) -> {
+			// 	ResourceLocation barsTexture = p.modLoc("block/bars/" + name + "_bars");
+			// 	p.generated(c, barsTexture);
+			// })
+			// .recipe((c, p) -> p.stonecutting(ingredient.get(), RecipeCategory.DECORATIONS, c::get, 4))
+			// .build()
 			.register();
 	}
 

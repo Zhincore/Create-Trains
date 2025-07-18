@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:exposed_copper_shingle_stairs"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

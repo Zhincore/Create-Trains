@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_tfc_white_cedar"
+    },
+    {
+      "item": "railways:track_tfc_white_cedar"
+    }
+  ],
+  "result": {
+    "item": "railways:track_tfc_white_cedar_wide"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": [
+      {
+        "tag": "railways:internal/nuggets/iron_nuggets"
+      },
+      {
+        "tag": "railways:internal/nuggets/zinc_nuggets"
+      }
+    ],
+    "S": {
+      "item": "byg:willow_slab"
+    }
+  },
+  "pattern": [
+    "R R",
+    "SSS"
+  ],
+  "result": {
+    "item": "railways:track_byg_willow"
+  },
+  "show_notification": true
+}

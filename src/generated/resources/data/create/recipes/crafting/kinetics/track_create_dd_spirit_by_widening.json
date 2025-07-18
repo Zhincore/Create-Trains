@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_create_dd_spirit_narrow"
+    },
+    {
+      "item": "railways:track_create_dd_spirit_narrow"
+    }
+  ],
+  "result": {
+    "item": "railways:track_create_dd_spirit"
+  }
+}

@@ -21,7 +21,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:vertical_framed_glass"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

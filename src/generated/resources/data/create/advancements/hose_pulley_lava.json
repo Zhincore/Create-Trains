@@ -15,7 +15,7 @@
     "frame": "goal",
     "hidden": false,
     "icon": {
-      "item": "create:hose_pulley"
+      "item": "minecraft:air"
     },
     "show_toast": true,
     "title": {

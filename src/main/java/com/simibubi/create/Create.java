@@ -167,22 +167,22 @@ public class Create {
 	}
 
 	public static void init(final FMLCommonSetupEvent event) {
-		AllFluids.registerFluidInteractions();
+		// AllFluids.registerFluidInteractions();
 		CreateNBTProcessors.register();
 
 		event.enqueueWork(() -> {
 			// TODO: custom registration should all happen in one place
 			// Most registration happens in the constructor.
 			// These registrations use Create's registered objects directly so they must run after registration has finished.
-			BoilerHeaters.registerDefaults();
+			// BoilerHeaters.registerDefaults();
 			AllPortalTracks.registerDefaults();
-			AllBlockSpoutingBehaviours.registerDefaults();
+			// AllBlockSpoutingBehaviours.registerDefaults();
 			AllMovementBehaviours.registerDefaults();
 			AllInteractionBehaviours.registerDefaults();
 			AllContraptionMovementSettings.registerDefaults();
-			AllOpenPipeEffectHandlers.registerDefaults();
+			// AllOpenPipeEffectHandlers.registerDefaults();
 			AllMountedDispenseItemBehaviors.registerDefaults();
-			AllUnpackingHandlers.registerDefaults();
+			// AllUnpackingHandlers.registerDefaults();
 			AllInventoryIdentifiers.registerDefaults();
 			// --
 
@@ -192,13 +192,13 @@ public class Create {
 	}
 
 	public static void onRegister(final RegisterEvent event) {
-		AllArmInteractionPointTypes.init();
-		AllFanProcessingTypes.init();
+		// AllArmInteractionPointTypes.init();
+		// AllFanProcessingTypes.init();
 		AllItemAttributeTypes.init();
 		AllContraptionTypes.init();
-		AllPotatoProjectileRenderModes.init();
-		AllPotatoProjectileEntityHitActions.init();
-		AllPotatoProjectileBlockHitActions.init();
+		// AllPotatoProjectileRenderModes.init();
+		// AllPotatoProjectileEntityHitActions.init();
+		// AllPotatoProjectileBlockHitActions.init();
 	}
 
 	public static LangBuilder lang() {

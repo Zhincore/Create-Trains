@@ -15,7 +15,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "create:package_frogport"
+      "item": "minecraft:air"
     },
     "show_toast": true,
     "title": {

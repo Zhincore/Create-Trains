@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:gantry_carriage"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

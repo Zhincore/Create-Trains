@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:brass_tunnel"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

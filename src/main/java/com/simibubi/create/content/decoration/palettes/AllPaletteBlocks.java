@@ -43,14 +43,14 @@ public class AllPaletteBlocks {
 	public static final BlockEntry<GlassBlock> TILED_GLASS = REGISTRATE.block("tiled_glass", GlassBlock::new)
 		.initialProperties(() -> Blocks.GLASS)
 		.addLayer(() -> RenderType::cutout)
-		.recipe((c, p) -> p.stonecutting(DataIngredient.tag(Tags.Items.GLASS_COLORLESS), RecipeCategory.BUILDING_BLOCKS,
-			c::get))
+		// .recipe((c, p) -> p.stonecutting(DataIngredient.tag(Tags.Items.GLASS_COLORLESS), RecipeCategory.BUILDING_BLOCKS,
+		// 	c::get))
 		.blockstate((c, p) -> BlockStateGen.cubeAll(c, p, "palettes/"))
-		.loot((t, g) -> t.dropWhenSilkTouch(g))
-		.tag(Tags.Blocks.GLASS_COLORLESS, BlockTags.IMPERMEABLE)
-		.item()
-		.tag(Tags.Items.GLASS_COLORLESS)
-		.build()
+		// .loot((t, g) -> t.dropWhenSilkTouch(g))
+		// .tag(Tags.Blocks.GLASS_COLORLESS, BlockTags.IMPERMEABLE)
+		// .item()
+		//.tag(Tags.Items.GLASS_COLORLESS)
+		// .build()
 		.register();
 
 	public static final BlockEntry<ConnectedGlassBlock> FRAMED_GLASS =

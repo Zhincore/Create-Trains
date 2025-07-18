@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": [
+      {
+        "tag": "forge:rods/wrought_iron"
+      },
+      {
+        "tag": "forge:rods/zinc"
+      }
+    ],
+    "S": {
+      "item": "tfc:wood/planks/douglas_fir_slab"
+    }
+  },
+  "pattern": [
+    "R R",
+    "SSS"
+  ],
+  "result": {
+    "item": "railways:track_tfc_douglas_fir"
+  },
+  "show_notification": true
+}

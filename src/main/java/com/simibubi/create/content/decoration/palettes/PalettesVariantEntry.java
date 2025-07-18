@@ -71,9 +71,9 @@ public class PalettesVariantEntry {
 					.register());
 		}
 
-		REGISTRATE.addDataGenerator(ProviderType.RECIPE,
-			p -> p.stonecutting(DataIngredient.tag(paletteStoneVariants.materialTag), RecipeCategory.BUILDING_BLOCKS,
-				baseBlock));
+		// REGISTRATE.addDataGenerator(ProviderType.RECIPE,
+		// 	p -> p.stonecutting(DataIngredient.tag(paletteStoneVariants.materialTag), RecipeCategory.BUILDING_BLOCKS,
+		// 		baseBlock));
 		REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, p -> p.addTag(paletteStoneVariants.materialTag)
 			.add(baseBlock.get()
 				.asItem()));

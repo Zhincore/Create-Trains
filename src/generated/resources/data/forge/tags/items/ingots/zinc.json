@@ -1,5 +1,6 @@
 {
   "values": [
-    "create:zinc_ingot"
+    "create:zinc_ingot",
+    "minecraft:iron_ingot"
   ]
 }

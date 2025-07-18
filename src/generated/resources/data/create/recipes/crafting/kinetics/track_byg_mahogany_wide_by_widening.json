@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_byg_mahogany"
+    },
+    {
+      "item": "railways:track_byg_mahogany"
+    }
+  ],
+  "result": {
+    "item": "railways:track_byg_mahogany_wide"
+  }
+}

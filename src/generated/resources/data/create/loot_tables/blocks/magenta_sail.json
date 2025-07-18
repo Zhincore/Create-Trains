@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:white_sail"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

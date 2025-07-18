@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_twilightforest_twilight_oak"
+    },
+    {
+      "item": "railways:track_twilightforest_twilight_oak"
+    }
+  ],
+  "result": {
+    "item": "railways:track_twilightforest_twilight_oak_wide"
+  }
+}

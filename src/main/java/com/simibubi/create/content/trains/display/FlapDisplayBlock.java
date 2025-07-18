@@ -89,7 +89,7 @@ public class FlapDisplayBlock extends HorizontalKineticBlock
 
 	@Override
 	public SpeedLevel getMinimumRequiredSpeedLevel() {
-		return SpeedLevel.MEDIUM;
+		return SpeedLevel.NONE;
 	}
 
 	@Override

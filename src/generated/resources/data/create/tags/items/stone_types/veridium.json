@@ -14,6 +14,6 @@
     "create:small_veridium_brick_wall",
     "create:layered_veridium",
     "create:veridium_pillar",
-    "create:veridium"
+    "minecraft:air"
   ]
 }

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:stockpile_switch"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

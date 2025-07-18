@@ -14,6 +14,6 @@
     "create:small_scoria_brick_wall",
     "create:layered_scoria",
     "create:scoria_pillar",
-    "create:scoria"
+    "minecraft:air"
   ]
 }

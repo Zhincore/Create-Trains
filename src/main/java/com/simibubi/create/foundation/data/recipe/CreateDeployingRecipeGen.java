@@ -21,8 +21,8 @@ import java.util.List;
 @SuppressWarnings("unused")
 public final class CreateDeployingRecipeGen extends DeployingRecipeGen {
 
-	GeneratedRecipe COPPER_TILES = copperChain(AllBlocks.COPPER_TILES);
-	GeneratedRecipe COPPER_SHINGLES = copperChain(AllBlocks.COPPER_SHINGLES);
+	// GeneratedRecipe COPPER_TILES = copperChain(AllBlocks.COPPER_TILES);
+	// GeneratedRecipe COPPER_SHINGLES = copperChain(AllBlocks.COPPER_SHINGLES);
 
 	GeneratedRecipe
 

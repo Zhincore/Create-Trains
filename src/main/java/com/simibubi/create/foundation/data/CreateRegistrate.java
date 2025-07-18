@@ -202,12 +202,12 @@ public class CreateRegistrate extends AbstractRegistrate<CreateRegistrate> {
 			.tag(BlockTags.DRIPSTONE_REPLACEABLE)
 			.tag(BlockTags.AZALEA_ROOT_REPLACEABLE)
 			.tag(BlockTags.MOSS_REPLACEABLE)
-			.tag(BlockTags.LUSH_GROUND_REPLACEABLE)
-			.item()
-			.model((c, p) -> p.cubeAll(c.getName(),
-				p.modLoc(hasNaturalVariants ? "block/palettes/stone_types/natural/" + name + "_1"
-					: "block/palettes/stone_types/" + c.getName())))
-			.build();
+			.tag(BlockTags.LUSH_GROUND_REPLACEABLE);
+			// .item()
+			// .model((c, p) -> p.cubeAll(c.getName(),
+			// 	p.modLoc(hasNaturalVariants ? "block/palettes/stone_types/natural/" + name + "_1"
+			// 		: "block/palettes/stone_types/" + c.getName())))
+			// .build();
 		return builder;
 	}
 

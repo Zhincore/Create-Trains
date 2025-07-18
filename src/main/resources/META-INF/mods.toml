@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[47,)"
-issueTrackerURL = "https://github.com/Creators-of-Create/Create/issues"
+issueTrackerURL = "https://github.com/Zhincore/Create-Trains/issues"
 license = "${mod_license}"
 
 [[mods]]
@@ -8,7 +8,7 @@ modId = "create"
 # The Implementation-Version property in the jar's MANIFEST.MF file will be used as the mod version at runtime
 version = "${file.jarVersion}"
 displayName = "${mod_name}"
-displayURL = "https://www.curseforge.com/minecraft/mc-mods/create"
+displayURL = "https://github.com/Zhincore/Create-Trains"
 logoFile = "icon.png"
 #credits=""
 authors = "${mod_author}"
@@ -50,3 +50,18 @@ mandatory = false
 versionRange = "[15.19.0,)"
 ordering = "NONE"
 side = "CLIENT"
+
+# For recipe replacement / compatibility
+[[dependencies.create]]
+modId = "railways"
+mandatory = false
+versionRange = "[1.6.11,)"
+ordering = "BEFORE"
+side = "BOTH"
+
+[[dependencies.create]]
+modId = "bellsandwhistles"
+mandatory = false
+versionRange = "[0.4.3,)"
+ordering = "BEFORE"
+side = "BOTH"

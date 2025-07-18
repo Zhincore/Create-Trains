@@ -15,7 +15,7 @@
     "frame": "goal",
     "hidden": true,
     "icon": {
-      "item": "create:mechanical_crafter"
+      "item": "minecraft:air"
     },
     "show_toast": true,
     "title": {

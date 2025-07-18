@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": [
+      {
+        "tag": "railways:internal/nuggets/iron_nuggets"
+      },
+      {
+        "tag": "railways:internal/nuggets/zinc_nuggets"
+      }
+    ],
+    "S": {
+      "item": "byg:skyris_slab"
+    }
+  },
+  "pattern": [
+    "R R",
+    "SSS"
+  ],
+  "result": {
+    "item": "railways:track_byg_skyris"
+  },
+  "show_notification": true
+}

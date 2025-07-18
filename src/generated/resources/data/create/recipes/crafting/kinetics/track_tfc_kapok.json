@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": [
+      {
+        "tag": "forge:rods/wrought_iron"
+      },
+      {
+        "tag": "forge:rods/zinc"
+      }
+    ],
+    "S": {
+      "item": "tfc:wood/planks/kapok_slab"
+    }
+  },
+  "pattern": [
+    "R R",
+    "SSS"
+  ],
+  "result": {
+    "item": "railways:track_tfc_kapok"
+  },
+  "show_notification": true
+}

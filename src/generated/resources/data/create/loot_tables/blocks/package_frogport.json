@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:package_frogport"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

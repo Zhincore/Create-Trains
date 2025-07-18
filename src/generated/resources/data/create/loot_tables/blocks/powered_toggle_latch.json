@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:powered_toggle_latch"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_natures_spirit_joshua_narrow"
+    },
+    {
+      "item": "railways:track_natures_spirit_joshua_narrow"
+    }
+  ],
+  "result": {
+    "item": "railways:track_natures_spirit_joshua"
+  }
+}

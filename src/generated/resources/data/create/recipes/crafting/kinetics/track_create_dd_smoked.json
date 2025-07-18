@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": [
+      {
+        "tag": "railways:internal/nuggets/iron_nuggets"
+      },
+      {
+        "tag": "railways:internal/nuggets/zinc_nuggets"
+      }
+    ],
+    "S": {
+      "item": "create_dd:smoked_slab"
+    }
+  },
+  "pattern": [
+    "R R",
+    "SSS"
+  ],
+  "result": {
+    "item": "railways:track_create_dd_smoked"
+  },
+  "show_notification": true
+}

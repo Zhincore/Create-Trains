@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:weathered_copper_tile_stairs"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

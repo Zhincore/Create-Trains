@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_byg_imparius"
+    },
+    {
+      "item": "railways:track_byg_imparius"
+    }
+  ],
+  "result": {
+    "item": "railways:track_byg_imparius_wide"
+  }
+}

@@ -1,9 +1,5 @@
 {
   "values": [
-    "create:tiled_glass",
-    "create:framed_glass",
-    "create:horizontal_framed_glass",
-    "create:vertical_framed_glass",
     "create:oak_window",
     "create:spruce_window",
     "create:birch_window",

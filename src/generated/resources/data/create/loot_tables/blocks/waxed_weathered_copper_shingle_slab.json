@@ -25,7 +25,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "create:waxed_weathered_copper_shingle_slab"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

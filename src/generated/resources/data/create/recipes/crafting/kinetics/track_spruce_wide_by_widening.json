@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_spruce"
+    },
+    {
+      "item": "railways:track_spruce"
+    }
+  ],
+  "result": {
+    "item": "railways:track_spruce_wide"
+  }
+}

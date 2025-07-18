@@ -135,14 +135,14 @@ public class CopperBlockSet {
 			.initialProperties(() -> baseBlock.get())
 			.loot((lt, block) -> variant.generateLootTable(lt, block, this, state, waxed))
 			.blockstate((ctx, prov) -> variant.generateBlockState(ctx, prov, this, state, waxed))
-			.recipe((c, p) -> variant.generateRecipes(entries.get(BlockVariant.INSTANCE)[state.ordinal()], c, p))
+			// .recipe((c, p) -> variant.generateRecipes(entries.get(BlockVariant.INSTANCE)[state.ordinal()], c, p))
 			.transform(TagGen.pickaxeOnly())
 			.onRegister(block -> onRegister.accept(state, block))
-			.tag(BlockTags.NEEDS_STONE_TOOL)
-			.simpleItem();
+			.tag(BlockTags.NEEDS_STONE_TOOL);
+			// .simpleItem();
 
-		if (variant == BlockVariant.INSTANCE && state == WeatherState.UNAFFECTED)
-			builder.recipe(mainBlockRecipe::accept);
+		// if (variant == BlockVariant.INSTANCE && state == WeatherState.UNAFFECTED)
+		// 	builder.recipe(mainBlockRecipe::accept);
 
 		if (variant == StairVariant.INSTANCE)
 			builder.tag(BlockTags.STAIRS);
@@ -150,17 +150,17 @@ public class CopperBlockSet {
 		if (variant == SlabVariant.INSTANCE)
 			builder.tag(BlockTags.SLABS);
 
-		if (waxed) {
-			builder.recipe((ctx, prov) -> {
-				Block unwaxed = get(variant, state, false).get();
-				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ctx.get())
-					.requires(unwaxed)
-					.requires(Items.HONEYCOMB)
-					.unlockedBy("has_unwaxed", RegistrateRecipeProvider.has(unwaxed))
-					.save(prov, new ResourceLocation(ctx.getId()
-						.getNamespace(), "crafting/" + generalDirectory + ctx.getName() + "_from_honeycomb"));
-			});
-		}
+		// if (waxed) {
+		// 	builder.recipe((ctx, prov) -> {
+		// 		Block unwaxed = get(variant, state, false).get();
+		// 		ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ctx.get())
+		// 			.requires(unwaxed)
+		// 			.requires(Items.HONEYCOMB)
+		// 			.unlockedBy("has_unwaxed", RegistrateRecipeProvider.has(unwaxed))
+		// 			.save(prov, new ResourceLocation(ctx.getId()
+		// 				.getNamespace(), "crafting/" + generalDirectory + ctx.getName() + "_from_honeycomb"));
+		// 	});
+		// }
 
 		return builder.register();
 	}

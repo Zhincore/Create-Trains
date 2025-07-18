@@ -104,7 +104,7 @@ public class BacktankUtil {
 	}
 
 	public static int maxAir(ItemStack backtank) {
-		return maxAir(backtank.getEnchantmentLevel(AllEnchantments.CAPACITY.get()));
+		return maxAir(0);//backtank.getEnchantmentLevel(AllEnchantments.CAPACITY.get()));
 	}
 
 	public static int maxAir(int enchantLevel) {

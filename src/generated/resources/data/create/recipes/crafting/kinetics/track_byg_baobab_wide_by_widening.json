@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_byg_baobab"
+    },
+    {
+      "item": "railways:track_byg_baobab"
+    }
+  ],
+  "result": {
+    "item": "railways:track_byg_baobab_wide"
+  }
+}

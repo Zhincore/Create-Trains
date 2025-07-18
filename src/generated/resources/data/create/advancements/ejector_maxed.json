@@ -15,7 +15,7 @@
     "frame": "goal",
     "hidden": false,
     "icon": {
-      "item": "create:weighted_ejector"
+      "item": "minecraft:air"
     },
     "show_toast": true,
     "title": {

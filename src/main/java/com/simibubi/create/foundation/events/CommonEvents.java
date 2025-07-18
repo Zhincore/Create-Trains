@@ -80,7 +80,7 @@ public class CommonEvents {
 	@SubscribeEvent
 	public static void playerLoggedIn(PlayerLoggedInEvent event) {
 		Player player = event.getEntity();
-		ToolboxHandler.playerLogin(player);
+		// ToolboxHandler.playerLogin(player);
 		Create.RAILWAYS.playerLogin(player);
 	}
 
@@ -113,7 +113,7 @@ public class CommonEvents {
 		if (world == null)
 			return;
 		ContraptionHandler.entitiesWhoJustDismountedGetSentToTheRightLocation(entityLiving, world);
-		ToolboxHandler.entityTick(entityLiving, world);
+		// ToolboxHandler.entityTick(entityLiving, world);
 	}
 
 	@SubscribeEvent
@@ -155,7 +155,7 @@ public class CommonEvents {
 		Create.REDSTONE_LINK_NETWORK_HANDLER.onLoadWorld(world);
 		Create.TORQUE_PROPAGATOR.onLoadWorld(world);
 		Create.RAILWAYS.levelLoaded(world);
-		Create.LOGISTICS.levelLoaded(world);
+		// Create.LOGISTICS.levelLoaded(world);
 	}
 
 	@SubscribeEvent
@@ -178,10 +178,10 @@ public class CommonEvents {
 	}
 
 	public static void leftClickEmpty(ServerPlayer player) {
-		ItemStack stack = player.getMainHandItem();
-		if (stack.getItem() instanceof ZapperItem) {
-			ZapperInteractionHandler.trySelect(stack, player);
-		}
+		// ItemStack stack = player.getMainHandItem();
+		// if (stack.getItem() instanceof ZapperItem) {
+		// 	ZapperInteractionHandler.trySelect(stack, player);
+		// }
 	}
 
 	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)

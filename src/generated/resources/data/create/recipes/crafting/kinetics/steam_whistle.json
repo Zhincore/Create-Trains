@@ -6,7 +6,7 @@
       "tag": "forge:ingots/copper"
     },
     "P": {
-      "tag": "forge:plates/gold"
+      "tag": "forge:ingots/gold"
     }
   },
   "pattern": [

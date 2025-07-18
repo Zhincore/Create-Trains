@@ -48,8 +48,8 @@ public class CreateDatagen {
 		generator.addProvider(event.includeServer(), new DamageTypeTagGen(output, lookupProvider, existingFileHelper));
 		generator.addProvider(event.includeServer(), new AllAdvancements(output));
 		generator.addProvider(event.includeServer(), new CreateStandardRecipeGen(output));
-		generator.addProvider(event.includeServer(), new CreateMechanicalCraftingRecipeGen(output));
-		generator.addProvider(event.includeServer(), new CreateSequencedAssemblyRecipeGen(output));
+		// generator.addProvider(event.includeServer(), new CreateMechanicalCraftingRecipeGen(output));
+		// generator.addProvider(event.includeServer(), new CreateSequencedAssemblyRecipeGen(output));
 		generator.addProvider(event.includeServer(), new VanillaHatOffsetGenerator(output));
 
 		if (event.includeServer()) {

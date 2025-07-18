@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_tfc_palm"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "railways:track_tfc_palm_narrow"
+  }
+}

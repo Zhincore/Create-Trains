@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:mechanical_plough"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

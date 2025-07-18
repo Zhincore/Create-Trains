@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_blue_skies_dusk"
+    },
+    {
+      "item": "railways:track_blue_skies_dusk"
+    }
+  ],
+  "result": {
+    "item": "railways:track_blue_skies_dusk_wide"
+  }
+}

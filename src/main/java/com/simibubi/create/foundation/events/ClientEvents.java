@@ -141,7 +141,7 @@ public class ClientEvents {
 		CreateClient.SCHEMATIC_HANDLER.tick();
 		CreateClient.ZAPPER_RENDER_HANDLER.tick();
 		CreateClient.POTATO_CANNON_RENDER_HANDLER.tick();
-		CreateClient.SOUL_PULSE_EFFECT_HANDLER.tick(world);
+		// CreateClient.SOUL_PULSE_EFFECT_HANDLER.tick(world);
 		CreateClient.RAILWAYS.clientTick();
 
 		ContraptionHandler.tick(world);
@@ -151,25 +151,25 @@ public class ClientEvents {
 		PonderTooltipHandler.tick();
 		// ScreenOpener.tick();
 		ServerSpeedProvider.clientTick();
-		BeltConnectorHandler.tick();
+		// BeltConnectorHandler.tick();
 //		BeltSlicer.tickHoveringInformation();
-		FilteringRenderer.tick();
-		LinkRenderer.tick();
-		ScrollValueRenderer.tick();
-		ChassisRangeDisplay.tick();
+		// FilteringRenderer.tick();
+		// LinkRenderer.tick();
+		// ScrollValueRenderer.tick();
+		// ChassisRangeDisplay.tick();
 		EdgeInteractionRenderer.tick();
 		GirderWrenchBehavior.tick();
-		WorldshaperRenderHandler.tick();
+		// WorldshaperRenderHandler.tick();
 		CouplingHandlerClient.tick();
 		CouplingRenderer.tickDebugModeRenders();
 		KineticDebugger.tick();
-		ExtendoGripRenderHandler.tick();
+		// ExtendoGripRenderHandler.tick();
 		// CollisionDebugger.tick();
-		ArmInteractionPointHandler.tick();
-		EjectorTargetHandler.tick();
+		// ArmInteractionPointHandler.tick();
+		// EjectorTargetHandler.tick();
 		ContraptionRenderInfoManager.tickFor(world);
 		BlueprintOverlayRenderer.tick();
-		ToolboxHandlerClient.clientTick();
+		// ToolboxHandlerClient.clientTick();
 		RadialWrenchHandler.clientTick();
 		TrackTargetingClient.clientTick();
 		TrackPlacement.clientTick();
@@ -182,16 +182,16 @@ public class ClientEvents {
 		ClipboardValueSettingsHandler.clientTick();
 		CreateClient.VALUE_SETTINGS_HANDLER.tick();
 		ScrollValueHandler.tick();
-		NetheriteBacktankFirstPersonRenderer.clientTick();
+		// NetheriteBacktankFirstPersonRenderer.clientTick();
 		ContraptionPlayerPassengerRotation.tick();
-		ChainConveyorInteractionHandler.clientTick();
-		ChainConveyorRidingHandler.clientTick();
-		ChainConveyorConnectionHandler.clientTick();
-		PackagePortTargetSelectionHandler.tick();
-		LogisticallyLinkedClientHandler.tick();
-		TableClothOverlayRenderer.tick();
-		CardboardArmorStealthOverlay.clientTick();
-		FactoryPanelConnectionHandler.clientTick();
+		// ChainConveyorInteractionHandler.clientTick();
+		// ChainConveyorRidingHandler.clientTick();
+		// ChainConveyorConnectionHandler.clientTick();
+		// PackagePortTargetSelectionHandler.tick();
+		// LogisticallyLinkedClientHandler.tick();
+		// TableClothOverlayRenderer.tick();
+		// CardboardArmorStealthOverlay.clientTick();
+		// FactoryPanelConnectionHandler.clientTick();
 		TickBasedCache.clientTick();
 	}
 
@@ -220,7 +220,7 @@ public class ClientEvents {
 			.isClientSide())
 			return;
 		CreateClient.invalidateRenderers();
-		CreateClient.SOUL_PULSE_EFFECT_HANDLER.refresh();
+		// CreateClient.SOUL_PULSE_EFFECT_HANDLER.refresh();
 		AnimationTickHolder.reset();
 		ControlsHandler.levelUnloaded(event.getLevel());
 	}
@@ -335,13 +335,13 @@ public class ClientEvents {
 		}
 	}
 
-	@SubscribeEvent
-	public static void leftClickEmpty(PlayerInteractEvent.LeftClickEmpty event) {
-		ItemStack stack = event.getItemStack();
-		if (stack.getItem() instanceof ZapperItem) {
-			AllPackets.getChannel().sendToServer(new LeftClickPacket());
-		}
-	}
+	// @SubscribeEvent
+	// public static void leftClickEmpty(PlayerInteractEvent.LeftClickEmpty event) {
+	// 	ItemStack stack = event.getItemStack();
+	// 	if (stack.getItem() instanceof ZapperItem) {
+	// 		AllPackets.getChannel().sendToServer(new LeftClickPacket());
+	// 	}
+	// }
 
 	@EventBusSubscriber(value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
 	public static class ModBusEvents {
@@ -356,7 +356,7 @@ public class ClientEvents {
 		public static void addEntityRendererLayers(EntityRenderersEvent.AddLayers event) {
 			EntityRenderDispatcher dispatcher = Minecraft.getInstance()
 				.getEntityRenderDispatcher();
-			BacktankArmorLayer.registerOnAll(dispatcher);
+			// BacktankArmorLayer.registerOnAll(dispatcher);
 			CreateHatArmorLayer.registerOnAll(dispatcher);
 		}
 
@@ -376,7 +376,7 @@ public class ClientEvents {
 
 		@SubscribeEvent
 		public static void registerItemDecorations(RegisterItemDecorationsEvent event) {
-			event.register(AllItems.POTATO_CANNON, PotatoCannonItemRenderer.DECORATOR);
+			// event.register(AllItems.POTATO_CANNON, PotatoCannonItemRenderer.DECORATOR);
 		}
 
 		@SubscribeEvent

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_create_dd_rose"
+    },
+    {
+      "item": "railways:track_create_dd_rose"
+    }
+  ],
+  "result": {
+    "item": "railways:track_create_dd_rose_wide"
+  }
+}

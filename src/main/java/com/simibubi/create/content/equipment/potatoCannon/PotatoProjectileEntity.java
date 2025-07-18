@@ -76,7 +76,7 @@ public class PotatoProjectileEntity extends AbstractHurtingProjectile implements
 		int power = cannon.getEnchantmentLevel(Enchantments.POWER_ARROWS);
 		int punch = cannon.getEnchantmentLevel(Enchantments.PUNCH_ARROWS);
 		int flame = cannon.getEnchantmentLevel(Enchantments.FLAMING_ARROWS);
-		int recovery = cannon.getEnchantmentLevel(AllEnchantments.POTATO_RECOVERY.get());
+		int recovery = 0;//cannon.getEnchantmentLevel(AllEnchantments.POTATO_RECOVERY.get());
 
 		if (power > 0)
 			additionalDamageMult = 1 + power * .2f;

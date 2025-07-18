@@ -126,124 +126,124 @@ public class CreateJEI implements IModPlugin {
 
 		CreateRecipeCategory<?>
 
-		milling = builder(AbstractCrushingRecipe.class)
-				.addTypedRecipes(AllRecipeTypes.MILLING)
-				.catalyst(AllBlocks.MILLSTONE::get)
-				.doubleItemIcon(AllBlocks.MILLSTONE.get(), AllItems.WHEAT_FLOUR.get())
-				.emptyBackground(177, 53)
-				.build("milling", MillingCategory::new),
+		// milling = builder(AbstractCrushingRecipe.class)
+		// 		.addTypedRecipes(AllRecipeTypes.MILLING)
+		// 		.catalyst(AllBlocks.MILLSTONE::get)
+		// 		.doubleItemIcon(AllBlocks.MILLSTONE.get(), AllItems.WHEAT_FLOUR.get())
+		// 		.emptyBackground(177, 53)
+		// 		.build("milling", MillingCategory::new),
 
-		crushing = builder(AbstractCrushingRecipe.class)
-				.addTypedRecipes(AllRecipeTypes.CRUSHING)
-				.addTypedRecipesExcluding(AllRecipeTypes.MILLING::getType, AllRecipeTypes.CRUSHING::getType)
-				.catalyst(AllBlocks.CRUSHING_WHEEL::get)
-				.doubleItemIcon(AllBlocks.CRUSHING_WHEEL.get(), AllItems.CRUSHED_GOLD.get())
-				.emptyBackground(177, 100)
-				.build("crushing", CrushingCategory::new),
+		// crushing = builder(AbstractCrushingRecipe.class)
+		// 		.addTypedRecipes(AllRecipeTypes.CRUSHING)
+		// 		.addTypedRecipesExcluding(AllRecipeTypes.MILLING::getType, AllRecipeTypes.CRUSHING::getType)
+		// 		.catalyst(AllBlocks.CRUSHING_WHEEL::get)
+		// 		.doubleItemIcon(AllBlocks.CRUSHING_WHEEL.get(), AllItems.CRUSHED_GOLD.get())
+		// 		.emptyBackground(177, 100)
+		// 		.build("crushing", CrushingCategory::new),
 
-		pressing = builder(PressingRecipe.class)
-				.addTypedRecipes(AllRecipeTypes.PRESSING)
-				.catalyst(AllBlocks.MECHANICAL_PRESS::get)
-				.doubleItemIcon(AllBlocks.MECHANICAL_PRESS.get(), AllItems.IRON_SHEET.get())
-				.emptyBackground(177, 70)
-				.build("pressing", PressingCategory::new),
+		// pressing = builder(PressingRecipe.class)
+		// 		.addTypedRecipes(AllRecipeTypes.PRESSING)
+		// 		.catalyst(AllBlocks.MECHANICAL_PRESS::get)
+		// 		.doubleItemIcon(AllBlocks.MECHANICAL_PRESS.get(), AllItems.IRON_SHEET.get())
+		// 		.emptyBackground(177, 70)
+		// 		.build("pressing", PressingCategory::new),
 
-		washing = builder(SplashingRecipe.class)
-				.addTypedRecipes(AllRecipeTypes.SPLASHING)
-				.catalystStack(ProcessingViaFanCategory.getFan("fan_washing"))
-				.doubleItemIcon(AllItems.PROPELLER.get(), Items.WATER_BUCKET)
-				.emptyBackground(178, 72)
-				.build("fan_washing", FanWashingCategory::new),
+		// washing = builder(SplashingRecipe.class)
+		// 		.addTypedRecipes(AllRecipeTypes.SPLASHING)
+		// 		.catalystStack(ProcessingViaFanCategory.getFan("fan_washing"))
+		// 		.doubleItemIcon(AllItems.PROPELLER.get(), Items.WATER_BUCKET)
+		// 		.emptyBackground(178, 72)
+		// 		.build("fan_washing", FanWashingCategory::new),
 
-		smoking = builder(SmokingRecipe.class)
-				.addTypedRecipes(() -> RecipeType.SMOKING)
-				.removeNonAutomation()
-				.catalystStack(ProcessingViaFanCategory.getFan("fan_smoking"))
-				.doubleItemIcon(AllItems.PROPELLER.get(), Items.CAMPFIRE)
-				.emptyBackground(178, 72)
-				.build("fan_smoking", FanSmokingCategory::new),
+		// smoking = builder(SmokingRecipe.class)
+		// 		.addTypedRecipes(() -> RecipeType.SMOKING)
+		// 		.removeNonAutomation()
+		// 		.catalystStack(ProcessingViaFanCategory.getFan("fan_smoking"))
+		// 		.doubleItemIcon(AllItems.PROPELLER.get(), Items.CAMPFIRE)
+		// 		.emptyBackground(178, 72)
+		// 		.build("fan_smoking", FanSmokingCategory::new),
 
-		blasting = builder(AbstractCookingRecipe.class)
-				.addTypedRecipesExcluding(() -> RecipeType.SMELTING, () -> RecipeType.BLASTING)
-				.addTypedRecipes(() -> RecipeType.BLASTING)
-				.removeRecipes(() -> RecipeType.SMOKING)
-				.removeNonAutomation()
-				.catalystStack(ProcessingViaFanCategory.getFan("fan_blasting"))
-				.doubleItemIcon(AllItems.PROPELLER.get(), Items.LAVA_BUCKET)
-				.emptyBackground(178, 72)
-				.build("fan_blasting", FanBlastingCategory::new),
+		// blasting = builder(AbstractCookingRecipe.class)
+		// 		.addTypedRecipesExcluding(() -> RecipeType.SMELTING, () -> RecipeType.BLASTING)
+		// 		.addTypedRecipes(() -> RecipeType.BLASTING)
+		// 		.removeRecipes(() -> RecipeType.SMOKING)
+		// 		.removeNonAutomation()
+		// 		.catalystStack(ProcessingViaFanCategory.getFan("fan_blasting"))
+		// 		.doubleItemIcon(AllItems.PROPELLER.get(), Items.LAVA_BUCKET)
+		// 		.emptyBackground(178, 72)
+		// 		.build("fan_blasting", FanBlastingCategory::new),
 
-		haunting = builder(HauntingRecipe.class)
-				.addTypedRecipes(AllRecipeTypes.HAUNTING)
-				.catalystStack(ProcessingViaFanCategory.getFan("fan_haunting"))
-				.doubleItemIcon(AllItems.PROPELLER.get(), Items.SOUL_CAMPFIRE)
-				.emptyBackground(178, 72)
-				.build("fan_haunting", FanHauntingCategory::new),
+		// haunting = builder(HauntingRecipe.class)
+		// 		.addTypedRecipes(AllRecipeTypes.HAUNTING)
+		// 		.catalystStack(ProcessingViaFanCategory.getFan("fan_haunting"))
+		// 		.doubleItemIcon(AllItems.PROPELLER.get(), Items.SOUL_CAMPFIRE)
+		// 		.emptyBackground(178, 72)
+		// 		.build("fan_haunting", FanHauntingCategory::new),
 
-		mixing = builder(BasinRecipe.class)
-				.addTypedRecipes(AllRecipeTypes.MIXING)
-				.catalyst(AllBlocks.MECHANICAL_MIXER::get)
-				.catalyst(AllBlocks.BASIN::get)
-				.doubleItemIcon(AllBlocks.MECHANICAL_MIXER.get(), AllBlocks.BASIN.get())
-				.emptyBackground(177, 103)
-				.build("mixing", MixingCategory::standard),
+		// mixing = builder(BasinRecipe.class)
+		// 		.addTypedRecipes(AllRecipeTypes.MIXING)
+		// 		.catalyst(AllBlocks.MECHANICAL_MIXER::get)
+		// 		.catalyst(AllBlocks.BASIN::get)
+		// 		.doubleItemIcon(AllBlocks.MECHANICAL_MIXER.get(), AllBlocks.BASIN.get())
+		// 		.emptyBackground(177, 103)
+		// 		.build("mixing", MixingCategory::standard),
 
-		autoShapeless = builder(BasinRecipe.class)
-				.enableWhen(c -> c.allowShapelessInMixer)
-				.addAllRecipesIf(r -> r instanceof CraftingRecipe && !(r instanceof IShapedRecipe<?>)
-								&& r.getIngredients()
-								.size() > 1
-								&& !MechanicalPressBlockEntity.canCompress(r) && !AllRecipeTypes.shouldIgnoreInAutomation(r),
-						BasinRecipe::convertShapeless)
-				.catalyst(AllBlocks.MECHANICAL_MIXER::get)
-				.catalyst(AllBlocks.BASIN::get)
-				.doubleItemIcon(AllBlocks.MECHANICAL_MIXER.get(), Items.CRAFTING_TABLE)
-				.emptyBackground(177, 85)
-				.build("automatic_shapeless", MixingCategory::autoShapeless),
+		// autoShapeless = builder(BasinRecipe.class)
+		// 		.enableWhen(c -> c.allowShapelessInMixer)
+		// 		.addAllRecipesIf(r -> r instanceof CraftingRecipe && !(r instanceof IShapedRecipe<?>)
+		// 						&& r.getIngredients()
+		// 						.size() > 1
+		// 						&& !MechanicalPressBlockEntity.canCompress(r) && !AllRecipeTypes.shouldIgnoreInAutomation(r),
+		// 				BasinRecipe::convertShapeless)
+		// 		.catalyst(AllBlocks.MECHANICAL_MIXER::get)
+		// 		.catalyst(AllBlocks.BASIN::get)
+		// 		.doubleItemIcon(AllBlocks.MECHANICAL_MIXER.get(), Items.CRAFTING_TABLE)
+		// 		.emptyBackground(177, 85)
+		// 		.build("automatic_shapeless", MixingCategory::autoShapeless),
 
-		brewing = builder(BasinRecipe.class)
-				.enableWhen(c -> c.allowBrewingInMixer)
-				.addRecipes(() -> PotionMixingRecipes.ALL)
-				.catalyst(AllBlocks.MECHANICAL_MIXER::get)
-				.catalyst(AllBlocks.BASIN::get)
-				.doubleItemIcon(AllBlocks.MECHANICAL_MIXER.get(), Blocks.BREWING_STAND)
-				.emptyBackground(177, 103)
-				.build("automatic_brewing", MixingCategory::autoBrewing),
+		// brewing = builder(BasinRecipe.class)
+		// 		.enableWhen(c -> c.allowBrewingInMixer)
+		// 		.addRecipes(() -> PotionMixingRecipes.ALL)
+		// 		.catalyst(AllBlocks.MECHANICAL_MIXER::get)
+		// 		.catalyst(AllBlocks.BASIN::get)
+		// 		.doubleItemIcon(AllBlocks.MECHANICAL_MIXER.get(), Blocks.BREWING_STAND)
+		// 		.emptyBackground(177, 103)
+		// 		.build("automatic_brewing", MixingCategory::autoBrewing),
 
-		packing = builder(BasinRecipe.class)
-				.addTypedRecipes(AllRecipeTypes.COMPACTING)
-				.catalyst(AllBlocks.MECHANICAL_PRESS::get)
-				.catalyst(AllBlocks.BASIN::get)
-				.doubleItemIcon(AllBlocks.MECHANICAL_PRESS.get(), AllBlocks.BASIN.get())
-				.emptyBackground(177, 103)
-				.build("packing", PackingCategory::standard),
+		// packing = builder(BasinRecipe.class)
+		// 		.addTypedRecipes(AllRecipeTypes.COMPACTING)
+		// 		.catalyst(AllBlocks.MECHANICAL_PRESS::get)
+		// 		.catalyst(AllBlocks.BASIN::get)
+		// 		.doubleItemIcon(AllBlocks.MECHANICAL_PRESS.get(), AllBlocks.BASIN.get())
+		// 		.emptyBackground(177, 103)
+		// 		.build("packing", PackingCategory::standard),
 
-		autoSquare = builder(BasinRecipe.class)
-				.enableWhen(c -> c.allowShapedSquareInPress)
-				.addAllRecipesIf(
-						r -> (r instanceof CraftingRecipe) && !(r instanceof MechanicalCraftingRecipe)
-								&& MechanicalPressBlockEntity.canCompress(r) && !AllRecipeTypes.shouldIgnoreInAutomation(r),
-						BasinRecipe::convertShapeless)
-				.catalyst(AllBlocks.MECHANICAL_PRESS::get)
-				.catalyst(AllBlocks.BASIN::get)
-				.doubleItemIcon(AllBlocks.MECHANICAL_PRESS.get(), Blocks.CRAFTING_TABLE)
-				.emptyBackground(177, 85)
-				.build("automatic_packing", PackingCategory::autoSquare),
+		// autoSquare = builder(BasinRecipe.class)
+		// 		.enableWhen(c -> c.allowShapedSquareInPress)
+		// 		.addAllRecipesIf(
+		// 				r -> (r instanceof CraftingRecipe) && !(r instanceof MechanicalCraftingRecipe)
+		// 						&& MechanicalPressBlockEntity.canCompress(r) && !AllRecipeTypes.shouldIgnoreInAutomation(r),
+		// 				BasinRecipe::convertShapeless)
+		// 		.catalyst(AllBlocks.MECHANICAL_PRESS::get)
+		// 		.catalyst(AllBlocks.BASIN::get)
+		// 		.doubleItemIcon(AllBlocks.MECHANICAL_PRESS.get(), Blocks.CRAFTING_TABLE)
+		// 		.emptyBackground(177, 85)
+		// 		.build("automatic_packing", PackingCategory::autoSquare),
 
-		sawing = builder(CuttingRecipe.class)
-				.addTypedRecipes(AllRecipeTypes.CUTTING)
-				.catalyst(AllBlocks.MECHANICAL_SAW::get)
-				.doubleItemIcon(AllBlocks.MECHANICAL_SAW.get(), Items.OAK_LOG)
-				.emptyBackground(177, 70)
-				.build("sawing", SawingCategory::new),
+		// sawing = builder(CuttingRecipe.class)
+		// 		.addTypedRecipes(AllRecipeTypes.CUTTING)
+		// 		.catalyst(AllBlocks.MECHANICAL_SAW::get)
+		// 		.doubleItemIcon(AllBlocks.MECHANICAL_SAW.get(), Items.OAK_LOG)
+		// 		.emptyBackground(177, 70)
+		// 		.build("sawing", SawingCategory::new),
 
-		blockCutting = builder(CondensedBlockCuttingRecipe.class)
-				.enableWhen(c -> c.allowStonecuttingOnSaw)
-				.addRecipes(() -> BlockCuttingCategory.condenseRecipes(getTypedRecipesExcluding(RecipeType.STONECUTTING, AllRecipeTypes::shouldIgnoreInAutomation)))
-				.catalyst(AllBlocks.MECHANICAL_SAW::get)
-				.doubleItemIcon(AllBlocks.MECHANICAL_SAW.get(), Items.STONE_BRICK_STAIRS)
-				.emptyBackground(177, 70)
-				.build("block_cutting", BlockCuttingCategory::new),
+		// blockCutting = builder(CondensedBlockCuttingRecipe.class)
+		// 		.enableWhen(c -> c.allowStonecuttingOnSaw)
+		// 		.addRecipes(() -> BlockCuttingCategory.condenseRecipes(getTypedRecipesExcluding(RecipeType.STONECUTTING, AllRecipeTypes::shouldIgnoreInAutomation)))
+		// 		.catalyst(AllBlocks.MECHANICAL_SAW::get)
+		// 		.doubleItemIcon(AllBlocks.MECHANICAL_SAW.get(), Items.STONE_BRICK_STAIRS)
+		// 		.emptyBackground(177, 70)
+		// 		.build("block_cutting", BlockCuttingCategory::new),
 
 		polishing = builder(SandPaperPolishingRecipe.class)
 				.addTypedRecipes(AllRecipeTypes.SANDPAPER_POLISHING)
@@ -258,67 +258,68 @@ public class CreateJEI implements IModPlugin {
 				.addRecipes(LogStrippingFakeRecipes::createRecipes)
 				.itemIcon(AllItems.BRASS_HAND.get())
 				.emptyBackground(177, 60)
-				.build("item_application", ItemApplicationCategory::new),
+				.build("item_application", ItemApplicationCategory::new)
 
-		deploying = builder(DeployerApplicationRecipe.class)
-				.addTypedRecipes(AllRecipeTypes.DEPLOYING)
-				.addTypedRecipes(AllRecipeTypes.SANDPAPER_POLISHING::getType, DeployerApplicationRecipe::convert)
-				.addTypedRecipes(AllRecipeTypes.ITEM_APPLICATION::getType, ManualApplicationRecipe::asDeploying)
-				.removeNonAutomation()
-				.catalyst(AllBlocks.DEPLOYER::get)
-				.catalyst(AllBlocks.DEPOT::get)
-				.catalyst(AllItems.BELT_CONNECTOR::get)
-				.itemIcon(AllBlocks.DEPLOYER.get())
-				.emptyBackground(177, 70)
-				.build("deploying", DeployingCategory::new),
+		// deploying = builder(DeployerApplicationRecipe.class)
+		// 		.addTypedRecipes(AllRecipeTypes.DEPLOYING)
+		// 		.addTypedRecipes(AllRecipeTypes.SANDPAPER_POLISHING::getType, DeployerApplicationRecipe::convert)
+		// 		.addTypedRecipes(AllRecipeTypes.ITEM_APPLICATION::getType, ManualApplicationRecipe::asDeploying)
+		// 		.removeNonAutomation()
+		// 		.catalyst(AllBlocks.DEPLOYER::get)
+		// 		.catalyst(AllBlocks.DEPOT::get)
+		// 		.catalyst(AllItems.BELT_CONNECTOR::get)
+		// 		.itemIcon(AllBlocks.DEPLOYER.get())
+		// 		.emptyBackground(177, 70)
+		// 		.build("deploying", DeployingCategory::new),
 
-		spoutFilling = builder(FillingRecipe.class)
-				.addTypedRecipes(AllRecipeTypes.FILLING)
-				.addRecipeListConsumer(recipes -> SpoutCategory.consumeRecipes(recipes::add, ingredientManager))
-				.catalyst(AllBlocks.SPOUT::get)
-				.doubleItemIcon(AllBlocks.SPOUT.get(), Items.WATER_BUCKET)
-				.emptyBackground(177, 70)
-				.build("spout_filling", SpoutCategory::new),
+		// spoutFilling = builder(FillingRecipe.class)
+		// 		.addTypedRecipes(AllRecipeTypes.FILLING)
+		// 		.addRecipeListConsumer(recipes -> SpoutCategory.consumeRecipes(recipes::add, ingredientManager))
+		// 		.catalyst(AllBlocks.SPOUT::get)
+		// 		.doubleItemIcon(AllBlocks.SPOUT.get(), Items.WATER_BUCKET)
+		// 		.emptyBackground(177, 70)
+		// 		.build("spout_filling", SpoutCategory::new),
 
-		draining = builder(EmptyingRecipe.class)
-				.addRecipeListConsumer(recipes -> ItemDrainCategory.consumeRecipes(recipes::add, ingredientManager))
-				.addTypedRecipes(AllRecipeTypes.EMPTYING)
-				.catalyst(AllBlocks.ITEM_DRAIN::get)
-				.doubleItemIcon(AllBlocks.ITEM_DRAIN.get(), Items.WATER_BUCKET)
-				.emptyBackground(177, 50)
-				.build("draining", ItemDrainCategory::new),
+		// draining = builder(EmptyingRecipe.class)
+		// 		.addRecipeListConsumer(recipes -> ItemDrainCategory.consumeRecipes(recipes::add, ingredientManager))
+		// 		.addTypedRecipes(AllRecipeTypes.EMPTYING)
+		// 		.catalyst(AllBlocks.ITEM_DRAIN::get)
+		// 		.doubleItemIcon(AllBlocks.ITEM_DRAIN.get(), Items.WATER_BUCKET)
+		// 		.emptyBackground(177, 50)
+		// 		.build("draining", ItemDrainCategory::new),
 
-		autoShaped = builder(CraftingRecipe.class)
-				.enableWhen(c -> c.allowRegularCraftingInCrafter)
-				.addAllRecipesIf(r -> r instanceof CraftingRecipe && !(r instanceof IShapedRecipe<?>)
-						&& r.getIngredients()
-						.size() == 1
-						&& !AllRecipeTypes.shouldIgnoreInAutomation(r))
-				.addTypedRecipesIf(() -> RecipeType.CRAFTING,
-						recipe -> recipe instanceof IShapedRecipe<?> && !AllRecipeTypes.shouldIgnoreInAutomation(recipe))
-				.catalyst(AllBlocks.MECHANICAL_CRAFTER::get)
-				.itemIcon(AllBlocks.MECHANICAL_CRAFTER.get())
-				.emptyBackground(177, 107)
-				.build("automatic_shaped", MechanicalCraftingCategory::new),
+		// autoShaped = builder(CraftingRecipe.class)
+		// 		.enableWhen(c -> c.allowRegularCraftingInCrafter)
+		// 		.addAllRecipesIf(r -> r instanceof CraftingRecipe && !(r instanceof IShapedRecipe<?>)
+		// 				&& r.getIngredients()
+		// 				.size() == 1
+		// 				&& !AllRecipeTypes.shouldIgnoreInAutomation(r))
+		// 		.addTypedRecipesIf(() -> RecipeType.CRAFTING,
+		// 				recipe -> recipe instanceof IShapedRecipe<?> && !AllRecipeTypes.shouldIgnoreInAutomation(recipe))
+		// 		.catalyst(AllBlocks.MECHANICAL_CRAFTER::get)
+		// 		.itemIcon(AllBlocks.MECHANICAL_CRAFTER.get())
+		// 		.emptyBackground(177, 107)
+		// 		.build("automatic_shaped", MechanicalCraftingCategory::new),
 
-		mechanicalCrafting = builder(CraftingRecipe.class)
-				.addTypedRecipes(AllRecipeTypes.MECHANICAL_CRAFTING)
-				.catalyst(AllBlocks.MECHANICAL_CRAFTER::get)
-				.itemIcon(AllBlocks.MECHANICAL_CRAFTER.get())
-				.emptyBackground(177, 107)
-				.build("mechanical_crafting", MechanicalCraftingCategory::new),
+		// mechanicalCrafting = builder(CraftingRecipe.class)
+		// 		.addTypedRecipes(AllRecipeTypes.MECHANICAL_CRAFTING)
+		// 		.catalyst(AllBlocks.MECHANICAL_CRAFTER::get)
+		// 		.itemIcon(AllBlocks.MECHANICAL_CRAFTER.get())
+		// 		.emptyBackground(177, 107)
+		// 		.build("mechanical_crafting", MechanicalCraftingCategory::new),
 
-		seqAssembly = builder(SequencedAssemblyRecipe.class)
-				.addTypedRecipes(AllRecipeTypes.SEQUENCED_ASSEMBLY)
-				.itemIcon(AllItems.PRECISION_MECHANISM.get())
-				.emptyBackground(180, 115)
-				.build("sequenced_assembly", SequencedAssemblyCategory::new),
+		// seqAssembly = builder(SequencedAssemblyRecipe.class)
+		// 		.addTypedRecipes(AllRecipeTypes.SEQUENCED_ASSEMBLY)
+		// 		.itemIcon(AllItems.PRECISION_MECHANISM.get())
+		// 		.emptyBackground(180, 115)
+		// 		.build("sequenced_assembly", SequencedAssemblyCategory::new),
 
-		mysteryConversion = builder(ConversionRecipe.class)
-				.addRecipes(() -> MysteriousItemConversionCategory.RECIPES)
-				.itemIcon(AllBlocks.PECULIAR_BELL.get())
-				.emptyBackground(177, 50)
-				.build("mystery_conversion", MysteriousItemConversionCategory::new);
+		// mysteryConversion = builder(ConversionRecipe.class)
+		// 		.addRecipes(() -> MysteriousItemConversionCategory.RECIPES)
+		// 		.itemIcon(AllBlocks.PECULIAR_BELL.get())
+		// 		.emptyBackground(177, 50)
+		// 		.build("mystery_conversion", MysteriousItemConversionCategory::new)
+		;
 
 	}
 
@@ -354,40 +355,40 @@ public class CreateJEI implements IModPlugin {
 
 	@Override
 	public void registerRecipeTransferHandlers(IRecipeTransferRegistration registration) {
-		registration.addRecipeTransferHandler(new BlueprintTransferHandler(), RecipeTypes.CRAFTING);
-		registration.addUniversalRecipeTransferHandler(new StockKeeperTransferHandler(registration.getJeiHelpers()));
+		// registration.addRecipeTransferHandler(new BlueprintTransferHandler(), RecipeTypes.CRAFTING);
+		// registration.addUniversalRecipeTransferHandler(new StockKeeperTransferHandler(registration.getJeiHelpers()));
 	}
 
 	@Override
 	public <T> void registerFluidSubtypes(ISubtypeRegistration registration, IPlatformFluidHelper<T> platformFluidHelper) {
-		PotionFluidSubtypeInterpreter interpreter = new PotionFluidSubtypeInterpreter();
-		PotionFluid potionFluid = AllFluids.POTION.get();
-		registration.registerSubtypeInterpreter(ForgeTypes.FLUID_STACK, potionFluid.getSource(), interpreter);
-		registration.registerSubtypeInterpreter(ForgeTypes.FLUID_STACK, potionFluid.getFlowing(), interpreter);
+		// PotionFluidSubtypeInterpreter interpreter = new PotionFluidSubtypeInterpreter();
+		// PotionFluid potionFluid = AllFluids.POTION.get();
+		// registration.registerSubtypeInterpreter(ForgeTypes.FLUID_STACK, potionFluid.getSource(), interpreter);
+		// registration.registerSubtypeInterpreter(ForgeTypes.FLUID_STACK, potionFluid.getFlowing(), interpreter);
 	}
 
 	@Override
 	public void registerExtraIngredients(IExtraIngredientRegistration registration) {
-		Collection<Potion> potions = ForgeRegistries.POTIONS.getValues();
-		Collection<FluidStack> potionFluids = new ArrayList<>(potions.size() * 3);
-		Set<Set<MobEffect>> visitedEffects = new HashSet<>();
-		for (Potion potion : potions) {
-			// @goshante: Ingame potion fluids always have Bottle tag that specifies
-			// to what bottle type this potion belongs
-			// Potion fluid without this tag wouldn't be recognized by other mods
+// 		Collection<Potion> potions = ForgeRegistries.POTIONS.getValues();
+// 		Collection<FluidStack> potionFluids = new ArrayList<>(potions.size() * 3);
+// 		Set<Set<MobEffect>> visitedEffects = new HashSet<>();
+// 		for (Potion potion : potions) {
+// 			// @goshante: Ingame potion fluids always have Bottle tag that specifies
+// 			// to what bottle type this potion belongs
+// 			// Potion fluid without this tag wouldn't be recognized by other mods
 			
-//			for (PotionFluid.BottleType bottleType : PotionFluid.BottleType.values()) {
-//				FluidStack potionFluid = PotionFluid.of(1000, potion, bottleType);
-//				potionFluids.add(potionFluid);
-//			}
+// //			for (PotionFluid.BottleType bottleType : PotionFluid.BottleType.values()) {
+// //				FluidStack potionFluid = PotionFluid.of(1000, potion, bottleType);
+// //				potionFluids.add(potionFluid);
+// //			}
 			
-			if (!potion.getEffects().isEmpty())
-				if (!visitedEffects.add(potion.getEffects().stream().map(mei -> mei.getEffect()).collect(Collectors.toSet())))
-					continue;
+// 			if (!potion.getEffects().isEmpty())
+// 				if (!visitedEffects.add(potion.getEffects().stream().map(mei -> mei.getEffect()).collect(Collectors.toSet())))
+// 					continue;
 			
-			potionFluids.add(PotionFluid.of(1000, potion, PotionFluid.BottleType.REGULAR));
-		}
-		registration.addExtraIngredients(ForgeTypes.FLUID_STACK, potionFluids);
+// 			potionFluids.add(PotionFluid.of(1000, potion, PotionFluid.BottleType.REGULAR));
+// 		}
+// 		registration.addExtraIngredients(ForgeTypes.FLUID_STACK, potionFluids);
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
@@ -395,12 +396,12 @@ public class CreateJEI implements IModPlugin {
 	public void registerGuiHandlers(IGuiHandlerRegistration registration) {
 		registration.addGenericGuiContainerHandler(AbstractSimiContainerScreen.class, new SlotMover());
 
-		registration.addGhostIngredientHandler(AbstractFilterScreen.class, new GhostIngredientHandler());
-		registration.addGhostIngredientHandler(BlueprintScreen.class, new GhostIngredientHandler());
-		registration.addGhostIngredientHandler(LinkedControllerScreen.class, new GhostIngredientHandler());
+		// registration.addGhostIngredientHandler(AbstractFilterScreen.class, new GhostIngredientHandler());
+		// registration.addGhostIngredientHandler(BlueprintScreen.class, new GhostIngredientHandler());
+		// registration.addGhostIngredientHandler(LinkedControllerScreen.class, new GhostIngredientHandler());
 		registration.addGhostIngredientHandler(ScheduleScreen.class, new GhostIngredientHandler());
-		registration.addGhostIngredientHandler(RedstoneRequesterScreen.class, new GhostIngredientHandler());
-		registration.addGhostIngredientHandler(FactoryPanelSetItemScreen.class, new GhostIngredientHandler());
+		// registration.addGhostIngredientHandler(RedstoneRequesterScreen.class, new GhostIngredientHandler());
+		// registration.addGhostIngredientHandler(FactoryPanelSetItemScreen.class, new GhostIngredientHandler());
 	}
 
 	private class CategoryBuilder<T extends Recipe<?>> {

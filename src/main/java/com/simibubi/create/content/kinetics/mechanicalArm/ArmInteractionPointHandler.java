@@ -39,55 +39,55 @@ public class ArmInteractionPointHandler {
 
 	static long lastBlockPos = -1;
 
-	@SubscribeEvent
-	public static void rightClickingBlocksSelectsThem(PlayerInteractEvent.RightClickBlock event) {
-		if (currentItem == null)
-			return;
-		BlockPos pos = event.getPos();
-		Level world = event.getLevel();
-		if (!world.isClientSide)
-			return;
-		Player player = event.getEntity();
-		if (player != null && player.isSpectator())
-			return;
+	// @SubscribeEvent
+	// public static void rightClickingBlocksSelectsThem(PlayerInteractEvent.RightClickBlock event) {
+	// 	if (currentItem == null)
+	// 		return;
+	// 	BlockPos pos = event.getPos();
+	// 	Level world = event.getLevel();
+	// 	if (!world.isClientSide)
+	// 		return;
+	// 	Player player = event.getEntity();
+	// 	if (player != null && player.isSpectator())
+	// 		return;
 
-		ArmInteractionPoint selected = getSelected(pos);
-		BlockState state = world.getBlockState(pos);
+	// 	ArmInteractionPoint selected = getSelected(pos);
+	// 	BlockState state = world.getBlockState(pos);
 
-		if (selected == null) {
-			ArmInteractionPoint point = ArmInteractionPoint.create(world, pos, state);
-			if (point == null)
-				return;
-			selected = point;
-			put(point);
-		}
+	// 	if (selected == null) {
+	// 		ArmInteractionPoint point = ArmInteractionPoint.create(world, pos, state);
+	// 		if (point == null)
+	// 			return;
+	// 		selected = point;
+	// 		put(point);
+	// 	}
 
-		selected.cycleMode();
-		if (player != null) {
-			Mode mode = selected.getMode();
-			CreateLang.builder()
-				.translate(mode.getTranslationKey(), CreateLang.blockName(state)
-					.style(ChatFormatting.WHITE))
-				.color(mode.getColor())
-				.sendStatus(player);
-		}
+	// 	selected.cycleMode();
+	// 	if (player != null) {
+	// 		Mode mode = selected.getMode();
+	// 		CreateLang.builder()
+	// 			.translate(mode.getTranslationKey(), CreateLang.blockName(state)
+	// 				.style(ChatFormatting.WHITE))
+	// 			.color(mode.getColor())
+	// 			.sendStatus(player);
+	// 	}
 
-		event.setCanceled(true);
-		event.setCancellationResult(InteractionResult.SUCCESS);
-	}
+	// 	event.setCanceled(true);
+	// 	event.setCancellationResult(InteractionResult.SUCCESS);
+	// }
 
-	@SubscribeEvent
-	public static void leftClickingBlocksDeselectsThem(PlayerInteractEvent.LeftClickBlock event) {
-		if (currentItem == null)
-			return;
-		if (!event.getLevel().isClientSide)
-			return;
-		BlockPos pos = event.getPos();
-		if (remove(pos) != null) {
-			event.setCanceled(true);
-			event.setCancellationResult(InteractionResult.SUCCESS);
-		}
-	}
+	// @SubscribeEvent
+	// public static void leftClickingBlocksDeselectsThem(PlayerInteractEvent.LeftClickBlock event) {
+	// 	if (currentItem == null)
+	// 		return;
+	// 	if (!event.getLevel().isClientSide)
+	// 		return;
+	// 	BlockPos pos = event.getPos();
+	// 	if (remove(pos) != null) {
+	// 		event.setCanceled(true);
+	// 		event.setCancellationResult(InteractionResult.SUCCESS);
+	// 	}
+	// }
 
 	public static void flushSettings(BlockPos pos) {
 		if (currentSelection == null)

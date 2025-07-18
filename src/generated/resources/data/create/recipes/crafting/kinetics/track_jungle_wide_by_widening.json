@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "railways:track_jungle"
+    },
+    {
+      "item": "railways:track_jungle"
+    }
+  ],
+  "result": {
+    "item": "railways:track_jungle_wide"
+  }
+}
